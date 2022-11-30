@@ -625,21 +625,12 @@ public class VehicleControl : MonoBehaviour
             WLight.enabled = WLight.intensity == 0 ? false : true;
         }
 
-
-
-
-
-
         wantedRPM = (5500.0f * accel) * 0.1f + wantedRPM * 0.9f;
 
         float rpm = 0.0f;
         int motorizedWheels = 0;
         bool floorContact = false;
         int currentWheel = 0;
-
-
-
-
 
         foreach (WheelComponent w in wheels)
         {

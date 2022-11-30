@@ -1,18 +1,27 @@
+using System;
+using UnityEngine;
+
 namespace DriveLogger
 {
-    public class DriverLog
+    public class DriverLog : LogBase
     {
+        public DriverLog()
+        {
+            _timeStamp = DateTime.Now.ToString("dd.MM.yyyy hh:mm:ss.fff");
+        }
+        
+        private readonly string _timeStamp;
         public int DriverId { get; set; }
         public int CurveId { get; set; }
 
-        public string getCSV()
+        public override string GetCsv()
         {
-            return $"{DriverId};{CurveId}";
+            return $"{_timeStamp};{DriverId};{CurveId}";
         }
 
-        public static string GetCSVHeaders()
+        public override string GetCsvHeaders()
         {
-            return $"DriverId;CurveId";
+            return "TimeStamp;DriverId;CurveId";
         }
     }
 }
