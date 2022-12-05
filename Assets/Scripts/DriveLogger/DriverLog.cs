@@ -11,17 +11,19 @@ namespace DriveLogger
         }
         
         private readonly string _timeStamp;
-        public int DriverId { get; set; }
+        
         public int CurveId { get; set; }
+        public float Steer { get; set; }
+        public float Speed { get; set; }
 
         public override string GetCsv()
         {
-            return $"{_timeStamp};{DriverId};{CurveId}";
+            return $"{_timeStamp};{CurveId};{Speed};{Steer};";
         }
 
         public override string GetCsvHeaders()
         {
-            return "TimeStamp;DriverId;CurveId";
+            return "TimeStamp;CurveId;Speed;Steering;";
         }
     }
 }

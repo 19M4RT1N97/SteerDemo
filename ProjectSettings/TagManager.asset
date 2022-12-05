@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - Street
   - Grass
+  - Start
   layers:
   - Default
   - TransparentFX

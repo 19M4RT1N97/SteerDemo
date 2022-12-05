@@ -141,8 +141,8 @@ public class VehicleControl : MonoBehaviour
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    private float steer = 0;
-    private float accel = 0.0f;
+    public float steer = 0;
+    public float accel = 0.0f;
     [HideInInspector]
     public bool brake;
 
@@ -213,7 +213,7 @@ public class VehicleControl : MonoBehaviour
 
 
     private GameObject[] Particle = new GameObject[4];
-
+    
     private Vector3 steerCurAngle;
 
     private Rigidbody myRigidbody;

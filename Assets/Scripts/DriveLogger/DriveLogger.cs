@@ -3,40 +3,47 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using UnityEngine;
+using Random = System.Random;
 
 namespace DriveLogger
 {
     public class DriveLogger : MonoBehaviour
     {
         [SerializeField] private int LogInterval;
-        [SerializeField] private string FileName; 
-        
-        private const string logPath = "DriveLogs/";
+        [SerializeField] private string FileName;
+        [SerializeField] private List<Vector3> _startPositions;
         private static List<DriverLog> DriverLog { get; set; }
-
+        private VehicleControl _vehicle;
+        private int? _currentStreet;
         private int _currLogInterval;
+        private Random _random;
+
         public void Start()
         {
-            DriverLog = new List<DriverLog>();
-            _currLogInterval = 0;
+            _vehicle = gameObject.GetComponent<VehicleControl>();
+            ResetLogging();
+            _random = new Random();
         }
 
         public void FixedUpdate()
         {
-            if (++_currLogInterval >= LogInterval)
+            if (_currentStreet.HasValue
+                && ++_currLogInterval >= LogInterval)
             {
-                AddDriverLog(new DriverLog{DriverId = 1, CurveId = 1});
+                DriverLog.Add(new DriverLog
+                {
+                    CurveId = _currentStreet.Value,
+                    Speed = _vehicle.speed,
+                    Steer = _vehicle.steer
+                });
                 _currLogInterval = 0;
             }
         }
 
-        private void AddDriverLog(DriverLog x) => DriverLog.Add(x);
-
-        public void FinishDriverLog()
+        private void FinishDriverLog()
         {
-            var filePath = logPath + FileName;
+            var filePath = FileName;
             Log(filePath);
-            DriverLog.Clear();
         }
 
         private void Log(string path)
@@ -62,6 +69,34 @@ namespace DriveLogger
             {
                 File.WriteAllText(path, csv.ToString());
             }
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag("Finish"))
+            {
+                FinishDriverLog();
+                ResetLogging();
+                RelocateVehicle();
+            }else if (other.CompareTag("Start"))
+            {
+                _currentStreet = other.GetComponent<StartBoxScript>().GetStreetId();
+            }
+        }
+
+        private void RelocateVehicle()
+        {
+            _vehicle.transform.localPosition = _startPositions[_random.Next(0, _startPositions.Count)];
+            _vehicle.accel = 0f;
+            _vehicle.steer = 0f;
+            _vehicle.currentGear = 0;
+        }
+
+        private void ResetLogging()
+        {
+            DriverLog = new List<DriverLog>();
+            _currentStreet = null;
+            _currLogInterval = 0;
         }
     }
 }
