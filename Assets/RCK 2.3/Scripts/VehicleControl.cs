@@ -157,10 +157,10 @@ public class VehicleControl : MonoBehaviour
 
     private float torque = 100f;
 
-    [HideInInspector]
+    
     public float speed = 0.0f;
 
-    private float lastSpeed = -10.0f;
+    public float lastSpeed = -10.0f;
 
 
     private bool shifting = false;
@@ -186,7 +186,7 @@ public class VehicleControl : MonoBehaviour
     [HideInInspector]
     public bool NeutralGear = true;
 
-    [HideInInspector]
+    
     public float motorRPM = 0.0f;
 
     [HideInInspector]
@@ -286,12 +286,10 @@ public class VehicleControl : MonoBehaviour
         wheels[3] = SetWheelComponent(carWheels.wheels.backLeft, 0, carWheels.wheels.backWheelDrive, carWheels.wheels.backLeft.position.y);
 
         if (carSetting.carSteer)
-        steerCurAngle = carSetting.carSteer.localEulerAngles;
+            steerCurAngle = carSetting.carSteer.localEulerAngles;
 
         foreach (WheelComponent w in wheels)
         {
-
-
             WheelCollider col = w.collider;
             col.suspensionDistance = carWheels.setting.Distance;
             JointSpring js = col.suspensionSpring;
@@ -300,11 +298,9 @@ public class VehicleControl : MonoBehaviour
             js.damper = carSetting.dampers;
             col.suspensionSpring = js;
 
-
             col.radius = carWheels.setting.Radius;
 
             col.mass = carWheels.setting.Weight;
-
 
             WheelFrictionCurve fc = col.forwardFriction;
 
@@ -318,11 +314,7 @@ public class VehicleControl : MonoBehaviour
             fc.asymptoteSlip = 2.0f;
             fc.stiffness = carSetting.stiffness;
             col.sidewaysFriction = fc;
-
-
         }
-
-
     }
 
 
@@ -364,10 +356,6 @@ public class VehicleControl : MonoBehaviour
            shiftTime = 1.5f;
         }
     }
-
-
-
-
     public void ShiftDown()
     {
         float now = Time.timeSinceLevelLoad;
@@ -401,7 +389,6 @@ public class VehicleControl : MonoBehaviour
     }
 
 
-
     void OnCollisionEnter(Collision collision)
     {
 
@@ -412,10 +399,7 @@ public class VehicleControl : MonoBehaviour
 
             myRigidbody.angularVelocity = new Vector3(-myRigidbody.angularVelocity.x * 0.5f, myRigidbody.angularVelocity.y * 0.5f, -myRigidbody.angularVelocity.z * 0.5f);
             myRigidbody.velocity = new Vector3(myRigidbody.velocity.x, myRigidbody.velocity.y * 0.5f, myRigidbody.velocity.z);
-
-
         }
-
     }
 
 
@@ -423,37 +407,24 @@ public class VehicleControl : MonoBehaviour
 
     void OnCollisionStay(Collision collision)
     {
-
-       if (collision.transform.root.GetComponent<VehicleControl>())
+        if (collision.transform.root.GetComponent<VehicleControl>())
             collision.transform.root.GetComponent<VehicleControl>().slip2 = 5.0f;
-
     }
-
-
-
-
-
-    
 
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     void Update()
     {
-
-
         if (!carSetting.automaticGear && activeControl)
         {
             if (Input.GetKeyDown("page up"))
             {
                 ShiftUp();
-
-
             }
             if (Input.GetKeyDown("page down"))
             {
                 ShiftDown();
-
             }
         }
 
@@ -464,13 +435,9 @@ public class VehicleControl : MonoBehaviour
 
     void FixedUpdate()
     {
-
-
         // speed of car
         speed = myRigidbody.velocity.magnitude * 2.7f;
-
-
-
+        
         if (speed < lastSpeed - 10 && slip < 10)
         {
             slip = lastSpeed / 15;
@@ -478,19 +445,11 @@ public class VehicleControl : MonoBehaviour
 
         lastSpeed = speed;
 
-
-
-
         if (slip2 != 0.0f)
             slip2 = Mathf.MoveTowards(slip2, 0.0f, 0.1f);
 
-
-
         myRigidbody.centerOfMass = carSetting.shiftCentre;
-
-
-
-
+        
         if (activeControl)
         {
 
