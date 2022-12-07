@@ -42,8 +42,7 @@ public class SpawnScript : MonoBehaviour
     {
         _vehicleControl.transform.localPosition = _startPositions[_random.Next(0, _startPositions.Count)];
         _vehicleControl.transform.rotation = Quaternion.Euler(Vector3.zero);
-        _vehicleControl.accel = 0f;
-        _vehicleControl.lastSpeed = 0f;
+        _vehicleControl.ResetCar();
         _vehicleBody.angularVelocity = Vector3.zero;
         _vehicleBody.velocity = Vector3.zero;
     }
