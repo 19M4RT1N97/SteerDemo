@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Logger;
 using UnityEngine;
@@ -5,28 +6,26 @@ using Random = System.Random;
 
 public class SpawnScript : MonoBehaviour
 {
-    [SerializeField] private List<Vector3> _startPositions;
+    private Vector3 _startPosition = new Vector3(2.5f, 0.2f, -95f);
     [SerializeField] private LayerMask _roadLayer;
-    private VehicleControl _vehicleControl;
-    private Rigidbody _vehicleBody;
+    private GameObject _vehicle;
     private DriveLogger _logger;
-    private Random _random;
-    
+    private GameObject _ogCar;
 
-    private void Start()
+
+    public void Start()
     {
-        _vehicleControl = gameObject.GetComponent<VehicleControl>();
-        _vehicleBody = gameObject.GetComponent<Rigidbody>();
-        _logger = gameObject.GetComponent<DriveLogger>();
-        _random = new Random();
+        _ogCar = GameObject.Find("RallyCarOG");
+        SpawnNewVehicle();
     }
 
     private void FixedUpdate()
     {
-        if (!Physics.Raycast(this.gameObject.transform.position, Vector3.down, 50, _roadLayer))
+        if (_vehicle &&
+            !Physics.Raycast(_vehicle.transform.position, Vector3.down, 50, _roadLayer))
         {
             _logger.ResetLogging();
-            RelocateVehicle();
+            SpawnNewVehicle();
         }
     }
 
@@ -34,16 +33,15 @@ public class SpawnScript : MonoBehaviour
     {
         if (other.CompareTag("Finish"))
         {
-            RelocateVehicle();
+            SpawnNewVehicle();
         }
     }
 
-    private void RelocateVehicle()
+    private void SpawnNewVehicle()
     {
-        _vehicleControl.transform.localPosition = _startPositions[_random.Next(0, _startPositions.Count)];
-        _vehicleControl.transform.rotation = Quaternion.Euler(Vector3.zero);
-        _vehicleControl.ResetCar();
-        _vehicleBody.angularVelocity = Vector3.zero;
-        _vehicleBody.velocity = Vector3.zero;
+        Destroy(_vehicle);
+        _vehicle = Instantiate(_ogCar, _startPosition, Quaternion.Euler(Vector3.zero));
+        _vehicle.GetComponent<VehicleControl>().activeControl = true;
+        _logger = _vehicle.GetComponent<DriveLogger>();
     }
 }

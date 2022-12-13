@@ -227,7 +227,6 @@ public class VehicleControl : MonoBehaviour
 
     private class WheelComponent
     {
-
         public Transform wheel;
         public WheelCollider collider;
         public Vector3 startPos;
@@ -238,11 +237,8 @@ public class VehicleControl : MonoBehaviour
         public float pos_y = 0.0f;
     }
 
-
     private WheelComponent SetWheelComponent(Transform wheel, float maxSteer, bool drive, float pos_y)
     {
-
-
         WheelComponent result = new WheelComponent();
         GameObject wheelCol = new GameObject(wheel.name + "WheelCollider");
 
@@ -995,15 +991,8 @@ public class VehicleControl : MonoBehaviour
         Gizmos.matrix = rotationMatrix;
         Gizmos.color = new Color(1, 0, 0, 0.5f);
 
-        Gizmos.DrawCube(Vector3.up/1.5f, new Vector3(2.5f, 2.0f, 6));
+        Gizmos.DrawCube(Vector3.up / 1.5f, new Vector3(2.5f, 2.0f, 6));
         Gizmos.DrawSphere(carSetting.shiftCentre / transform.lossyScale.x, 0.2f);
 
     }
-    
-    public void ResetCar(){
-        Awake();
-    }
-
-
-
 }

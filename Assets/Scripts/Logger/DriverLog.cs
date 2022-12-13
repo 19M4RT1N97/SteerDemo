@@ -7,8 +7,11 @@ namespace Logger
     {
         public DriverLog()
         {
-            _timeStamp = DateTime.Now.ToString("dd.MM.yyyy hh:mm:ss.fff");
+            _datestamp = DateTime.Now.ToString("dd.mm.yyyy");
+            _timeStamp = DateTime.Now.ToString("hh:mm:ss.fff");
         }
+
+        private readonly string _datestamp;
         
         private readonly string _timeStamp;
         
@@ -18,12 +21,12 @@ namespace Logger
 
         public override string GetCsv()
         {
-            return $"{_timeStamp};{CurveId};{Speed};{Steer};";
+            return $"{_datestamp};{_timeStamp};{CurveId};{Speed};{Steer};";
         }
 
         public override string GetCsvHeaders()
         {
-            return "TimeStamp;CurveId;Speed;Steering;";
+            return "Date;Time;CurveId;Speed;Steering;";
         }
     }
 }
