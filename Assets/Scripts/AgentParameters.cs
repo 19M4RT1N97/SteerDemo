@@ -6,7 +6,7 @@ namespace DefaultNamespace
     {
         public Vector3 position;
         public Vector3 direction;
-        public int length;
+        public float length;
         
     }
 }

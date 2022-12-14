@@ -15,18 +15,18 @@ namespace Logger
         
         private readonly string _timeStamp;
         
-        public int CurveId { get; set; }
+        public int CurveAngle { get; set; }
         public float Steer { get; set; }
         public float Speed { get; set; }
 
         public override string GetCsv()
         {
-            return $"{_datestamp};{_timeStamp};{CurveId};{Speed};{Steer};";
+            return $"{_datestamp};{_timeStamp};{CurveAngle};{Speed};{Steer};";
         }
 
         public override string GetCsvHeaders()
         {
-            return "Date;Time;CurveId;Speed;Steering;";
+            return "Date;Time;CurveAngle;Speed;Steering;";
         }
     }
 }

@@ -1,40 +1,44 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using Rules;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
+using Random = System.Random;
 
 namespace DefaultNamespace
 {
     public class SimpleVisualizer : MonoBehaviour
     {
-        public StreetGen LSystem;
-        private List<Vector3> positions;
+        [SerializeField] private GameObject _finish;
+        private List<Vector3> _positions;
+        private Vector3 _startPosition = new Vector3(0f, 0f, 25f);
+        private float _length = 8f;
+        private List<GameObject> prevStreet;
         public GameObject prefab;
-        public Material lineMaterial;
 
-        private int length = 8;
-        public int Length
-        {
-            get => length > 0 ? length : 0;
-            set => length = value;
-        }
-        private float angle = 90;
-        
         private void Start()
         {
-            positions = new List<Vector3>();
-            var sequence = LSystem.GenerateSentence();
-            VisualizeSequence(sequence);
+            _positions = new List<Vector3>();
         }
 
-        private void VisualizeSequence(string sequence)
+        public void VisualizeSequence(int angle, string sequence)
         {
+            if (prevStreet.Count > 0)
+            {
+                foreach (var go in prevStreet)
+                {
+                    Destroy(go);
+                }
+            }
+            _positions.Clear();
+
             Stack<AgentParameters> savePoints = new Stack<AgentParameters>();
-            var currentPosition = Vector3.zero;
+            var currentPosition = _startPosition;
             var direction = Vector3.forward;
-            var tempPosition = Vector3.zero;
-            positions.Add(currentPosition);
+            _positions.Add(currentPosition);
 
             foreach (var letter in sequence)
             {
@@ -47,7 +51,7 @@ namespace DefaultNamespace
                         {
                             position = currentPosition,
                             direction = direction, 
-                            length = Length
+                            length = _length
                         });
                         break;
                     case EncodingLetters.load:
@@ -56,7 +60,7 @@ namespace DefaultNamespace
                             var agentParameter = savePoints.Pop();
                             currentPosition = agentParameter.position;
                             direction = agentParameter.direction;
-                            Length = agentParameter.length;
+                            _length = agentParameter.length;
                         }
                         else
                         {
@@ -64,41 +68,25 @@ namespace DefaultNamespace
                         }
                         break;
                     case EncodingLetters.draw:
-                        tempPosition = currentPosition;
-                        currentPosition += direction * Length;
-                        DrawLine(tempPosition, currentPosition, Color.red);
-                        Length -= 2;
-                        positions.Add(currentPosition);
+                        currentPosition += direction * _length;
+                        var roadTile = Instantiate(prefab, currentPosition, Quaternion.Euler(0f,angle*_positions.Count, 0f));
+                        prevStreet.Add(roadTile);
+                        _positions.Add(currentPosition);
                         break;
                     case EncodingLetters.turnRight:
                         direction = Quaternion.AngleAxis(angle, Vector3.up)*direction;
                         break;
                     case EncodingLetters.turnLeft:
-                        direction = Quaternion.AngleAxis(-angle, Vector3.up)*direction;
+                        direction = Quaternion.AngleAxis(angle, Vector3.up)*direction;
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();
                 }
             }
 
-            foreach (var position in positions)
-            {
-                Instantiate(prefab, position, Quaternion.identity);
-            }
-        }
-
-        private void DrawLine(Vector3 start, Vector3 end, Color c)
-        {
-            GameObject line = new GameObject("Line");
-            line.transform.position = start;
-            var lineRenderer = line.AddComponent<LineRenderer>();
-            lineRenderer.material = lineMaterial;
-            lineRenderer.startColor = c;
-            lineRenderer.endColor = c;
-            lineRenderer.startWidth = 0.1f;
-            lineRenderer.endWidth = 0.1f;
-            lineRenderer.SetPosition(0, start);
-            lineRenderer.SetPosition(1, end);
+            var lastPart = prevStreet.Last();
+            _finish.transform.position = lastPart.transform.position;
+            _finish.transform.rotation = lastPart.transform.rotation;
         }
     }
 }

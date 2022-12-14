@@ -13,7 +13,7 @@ namespace Logger
         [SerializeField] private string FileName;
         private static List<DriverLog> DriverLog { get; set; }
         private VehicleControl _vehicle;
-        private int? _currentStreet;
+        private int? _currentStreetAngle;
         private int _currLogInterval;
 
         public void Start()
@@ -24,12 +24,12 @@ namespace Logger
 
         public void FixedUpdate()
         {
-            if (_currentStreet.HasValue
+            if (_currentStreetAngle.HasValue
                 && ++_currLogInterval >= LogInterval)
             {
                 DriverLog.Add(new DriverLog
                 {
-                    CurveId = _currentStreet.Value,
+                    CurveAngle = _currentStreetAngle.Value,
                     Speed = _vehicle.speed,
                     Steer = _vehicle.steer
                 });
@@ -40,11 +40,11 @@ namespace Logger
         public void ResetLogging()
         {
             DriverLog = new List<DriverLog>();
-            _currentStreet = null;
+            _currentStreetAngle = null;
             _currLogInterval = 0;
         }
 
-        private void FinishDriverLog()
+        public void FinishDriverLog()
         {
             var filePath = FileName;
             Log(filePath);
@@ -77,14 +77,9 @@ namespace Logger
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag("Finish"))
+            if (other.CompareTag("Start"))
             {
-                FinishDriverLog();
-                ResetLogging();
-            }
-            else if (other.CompareTag("Start"))
-            {
-                _currentStreet = other.GetComponent<StartBoxScript>().GetStreetId();
+                _currentStreetAngle = other.GetComponent<StartBoxScript>().StreetAngle;
             }
         }
     }
