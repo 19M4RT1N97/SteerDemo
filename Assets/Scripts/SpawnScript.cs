@@ -1,7 +1,9 @@
+using System;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using DefaultNamespace;
 using Logger;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using Random = System.Random;
@@ -12,13 +14,10 @@ public class SpawnScript : MonoBehaviour
     [SerializeField] private LayerMask _roadLayer;
     [SerializeField] private GameObject _prefab;
     [SerializeField] private SimpleVisualizer _visualizer;
-    [SerializeField] private List<string> _sequences;
     private StartBoxScript _start;
     private GameObject _vehicle;
     private DriveLogger _logger;
-
     private Random _random;
-    private float angle;
 
     public void Start()
     {
@@ -53,9 +52,11 @@ public class SpawnScript : MonoBehaviour
         _vehicle = Instantiate(_prefab, _startPosition, Quaternion.Euler(Vector3.zero));
         _vehicle.GetComponent<VehicleControl>().activeControl = true;
         _logger = _vehicle.GetComponent<DriveLogger>();
-        var index = _random.Next(0, _sequences.Count);
-        var angle = index * 5 - 90;
-        _visualizer.VisualizeSequence(angle, _sequences[index]);
+
+        // var angle = _random.Next(0, 36)*5-90;//[-90, 90]
+        var angle = _random.Next(0, 20)*5-50;//[-90, 90]
+        
+        _visualizer.VisualizeSequence(angle, 10-(int)math.sqrt(Math.Pow(angle/10,2)));
         _start.StreetAngle = angle;
 
     }

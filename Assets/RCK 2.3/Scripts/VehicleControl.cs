@@ -268,7 +268,9 @@ public class VehicleControl : MonoBehaviour
 
     void Awake()
     {
-
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        
         if (carSetting.automaticGear) NeutralGear = false;
 
         myRigidbody = transform.GetComponent<Rigidbody>();
@@ -463,17 +465,13 @@ public class VehicleControl : MonoBehaviour
                     accel = Input.GetAxis("Vertical");
                     brake = Input.GetButton("Jump");
                     shift = Input.GetKey(KeyCode.LeftShift) | Input.GetKey(KeyCode.RightShift);
-
-
                 }
 
             }
             else if (controlMode == ControlMode.touch)
             {
-
                 if (accelFwd != 0) { accel = accelFwd; } else { accel = accelBack; }
                 steer = Mathf.MoveTowards(steer, steerAmount, 0.07f);
-
             }
 
         }
