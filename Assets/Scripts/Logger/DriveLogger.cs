@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -9,13 +10,11 @@ namespace Logger
 {
     public class DriveLogger : MonoBehaviour
     {
-        [SerializeField] private int LogInterval;
         [SerializeField] private string FileName;
         private static List<DriverLog> DriverLog { get; set; }
         private VehicleControl _vehicle;
-        private int? _currentStreetAngle;
-        private int _currLogInterval;
-
+        public int? _currentStreetAngle;
+        
         public void Start()
         {
             _vehicle = gameObject.GetComponent<VehicleControl>();
@@ -24,8 +23,7 @@ namespace Logger
 
         public void FixedUpdate()
         {
-            if (_currentStreetAngle.HasValue
-                && ++_currLogInterval >= LogInterval)
+            if (_currentStreetAngle.HasValue)
             {
                 DriverLog.Add(new DriverLog
                 {
@@ -33,7 +31,6 @@ namespace Logger
                     Speed = _vehicle.speed,
                     Steer = _vehicle.steer
                 });
-                _currLogInterval = 0;
             }
         }
         
@@ -41,7 +38,6 @@ namespace Logger
         {
             DriverLog = new List<DriverLog>();
             _currentStreetAngle = null;
-            _currLogInterval = 0;
         }
 
         public void FinishDriverLog()

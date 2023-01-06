@@ -1,10 +1,7 @@
 using System;
-using System.Collections.Generic;
-using System.Security.Cryptography;
 using DefaultNamespace;
 using Logger;
 using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
 using Random = System.Random;
 
@@ -18,6 +15,7 @@ public class SpawnScript : MonoBehaviour
     private GameObject _vehicle;
     private DriveLogger _logger;
     private Random _random;
+    private DateTime? _startTime;
 
     public void Start()
     {
@@ -28,6 +26,14 @@ public class SpawnScript : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!_startTime.HasValue && _logger._currentStreetAngle.HasValue)
+        {
+            _startTime = DateTime.Now;
+        }else if(_startTime.HasValue && _startTime.Value.Subtract(DateTime.Now).TotalMinutes < -1)
+        {
+            _logger.ResetLogging();
+            SpawnNewVehicle();
+        }
         if (_vehicle &&
             !Physics.Raycast(_vehicle.transform.position, Vector3.down, 50, _roadLayer))
         {
@@ -54,10 +60,10 @@ public class SpawnScript : MonoBehaviour
         _logger = _vehicle.GetComponent<DriveLogger>();
 
         // var angle = _random.Next(0, 36)*5-90;//[-90, 90]
-        var angle = _random.Next(0, 20)*5-50;//[-90, 90]
+        var angle = _random.Next(0, 20)*5-50;//[-50, 50]
         
         _visualizer.VisualizeSequence(angle, 10-(int)math.sqrt(Math.Pow(angle/10,2)));
         _start.StreetAngle = angle;
-
+        _startTime = null;
     }
 }
