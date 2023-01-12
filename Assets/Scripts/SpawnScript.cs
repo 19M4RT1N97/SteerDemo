@@ -29,7 +29,7 @@ public class SpawnScript : MonoBehaviour
         if (!_startTime.HasValue && _logger._currentStreetAngle.HasValue)
         {
             _startTime = DateTime.Now;
-        }else if(_startTime.HasValue && _startTime.Value.Subtract(DateTime.Now).TotalMinutes < -1)
+        }else if(_startTime.HasValue && DateTime.Now.Subtract(_startTime.Value).TotalMinutes > 1)
         {
             _logger.ResetLogging();
             SpawnNewVehicle();

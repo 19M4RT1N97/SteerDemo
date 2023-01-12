@@ -46,7 +46,7 @@ namespace DefaultNamespace
             }
 
             var lastPart = prevStreet.Last();
-            _finish.transform.position = lastPart.transform.position + direction * (_length / 2);
+            _finish.transform.position = lastPart.transform.position + direction * (_length / 2) + new Vector3(0,5,0);
             _finish.transform.rotation = lastPart.transform.rotation;
         }
     }
