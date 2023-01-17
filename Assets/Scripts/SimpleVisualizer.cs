@@ -52,8 +52,8 @@ namespace DefaultNamespace
             _splineMesh.UpdateMesh();
             var last = _spline.GetAnchorList().Last();
             _finish.transform.position = last.position + new Vector3(0,5,0);
-            _finish.transform.rotation =
-                Quaternion.Euler(Quaternion.AngleAxis(angle/2, Vector3.up) * _spline.GetPointList().Last().forward);
+            _finish.transform.rotation = Quaternion.Euler(new Vector3(0,(iterationAmount-1)*angle,0));
+            //Quaternion.Euler(Quaternion.AngleAxis(angle/2, Vector3.up) * _spline.GetPointList().Last().forward);
         }
     }
 }
