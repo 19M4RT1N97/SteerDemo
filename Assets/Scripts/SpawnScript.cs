@@ -7,7 +7,7 @@ using Random = System.Random;
 
 public class SpawnScript : MonoBehaviour
 {
-    private Vector3 _startPosition = new Vector3(0, 0.15f, 10f);
+    private Vector3 _startPosition = new Vector3(0, 0.2f, 10f);
     [SerializeField] private LayerMask _roadLayer;
     [SerializeField] private GameObject _prefab;
     [SerializeField] private SimpleVisualizer _visualizer;
@@ -16,6 +16,7 @@ public class SpawnScript : MonoBehaviour
     private DriveLogger _logger;
     private Random _random;
     private DateTime? _startTime;
+    private RCC_CarControllerV3 _carController;
 
     public void Start()
     {
@@ -56,9 +57,9 @@ public class SpawnScript : MonoBehaviour
     {
         Destroy(_vehicle);
         _vehicle = Instantiate(_prefab, _startPosition, Quaternion.Euler(Vector3.zero));
-        _vehicle.GetComponent<VehicleControl>().activeControl = true;
+        _carController = _vehicle.GetComponent<RCC_CarControllerV3>();
         _logger = _vehicle.GetComponent<DriveLogger>();
-
+        
         // var angle = _random.Next(0, 36)*5-90;//[-90, 90]
         var angle = _random.Next(0, 20)*5-50;//[-50, 50]
         

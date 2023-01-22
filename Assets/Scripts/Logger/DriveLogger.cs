@@ -12,12 +12,12 @@ namespace Logger
     {
         [SerializeField] private string FileName;
         private static List<DriverLog> DriverLog { get; set; }
-        private VehicleControl _vehicle;
+        private RCC_CarControllerV3 _vehicle;
         public int? _currentStreetAngle;
         
         public void Start()
         {
-            _vehicle = gameObject.GetComponent<VehicleControl>();
+            _vehicle = gameObject.GetComponent<RCC_CarControllerV3>();
             ResetLogging();
         }
 
