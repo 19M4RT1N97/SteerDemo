@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using DefaultNamespace;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 
@@ -14,10 +16,14 @@ namespace Logger
         private static List<DriverLog> DriverLog { get; set; }
         private RCC_CarControllerV3 _vehicle;
         public int? _currentStreetAngle;
+        private GameObject _car;
+        private SimpleVisualizer _visualizer;
         
         public void Start()
         {
             _vehicle = gameObject.GetComponent<RCC_CarControllerV3>();
+            
+            _visualizer = GameObject.Find("SimpleVisualizer").GetComponent<SimpleVisualizer>();
             ResetLogging();
         }
 
@@ -25,11 +31,14 @@ namespace Logger
         {
             if (_currentStreetAngle.HasValue)
             {
+                var statistics = _visualizer.GetSplineData(_car);
                 DriverLog.Add(new DriverLog
                 {
                     CurveAngle = _currentStreetAngle.Value,
                     Speed = _vehicle.speed,
-                    Steer = _vehicle.steer
+                    Steer = _vehicle.steer,
+                    Distance = statistics.Distance,
+                    RoadPercentage = statistics.RoadPercent
                 });
             }
         }
@@ -75,7 +84,9 @@ namespace Logger
         {
             if (other.CompareTag("Start"))
             {
-                _currentStreetAngle = other.GetComponent<StartBoxScript>().StreetAngle;
+                var start = other.GetComponent<StartBoxScript>();
+                _currentStreetAngle = start.StreetAngle;
+                _car = start.Car;
             }
         }
     }

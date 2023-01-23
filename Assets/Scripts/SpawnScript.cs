@@ -16,7 +16,6 @@ public class SpawnScript : MonoBehaviour
     private DriveLogger _logger;
     private Random _random;
     private DateTime? _startTime;
-    private RCC_CarControllerV3 _carController;
 
     public void Start()
     {
@@ -57,7 +56,6 @@ public class SpawnScript : MonoBehaviour
     {
         Destroy(_vehicle);
         _vehicle = Instantiate(_prefab, _startPosition, Quaternion.Euler(Vector3.zero));
-        _carController = _vehicle.GetComponent<RCC_CarControllerV3>();
         _logger = _vehicle.GetComponent<DriveLogger>();
         
         // var angle = _random.Next(0, 36)*5-90;//[-90, 90]
@@ -66,6 +64,7 @@ public class SpawnScript : MonoBehaviour
         // _visualizer.VisualizeSequence(angle, 10-(int)math.sqrt(Math.Pow(angle/10,2)));
         _visualizer.VisualizeSequence(angle, 10-(int)math.sqrt(Math.Pow(angle/10,2)));
         _start.StreetAngle = angle;
+        _start.Car = _vehicle;
         _startTime = null;
     }
 }

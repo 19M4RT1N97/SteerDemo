@@ -7,34 +7,25 @@ namespace DefaultNamespace
     public class SimpleVisualizer : MonoBehaviour
     {
         [SerializeField] private GameObject _finish;
-        
-        private List<Vector3> _positions;
-        //street
-        // private Vector3 _startPosition = new Vector3(0f, 0f, 25f);
-        
-        private float _length = 10f;
-        private List<GameObject> prevStreet;
-        public GameObject prefab;
-
+        [SerializeField] private GameObject prefab;
+        private float _length = 30f;
         private SplineDone _spline;
         private SplineMesh _splineMesh;
-        //spline
-        private Vector3 _startPosition = new Vector3(0f, 0f, 30f);
-
+        private Vector3 _startPosition = new Vector3(0f, 0f, 90f);
+        private GameObject _endStreight;
         private void Awake()
         {
             _splineMesh = gameObject.AddComponent<SplineMesh>();
             _spline = gameObject.AddComponent<SplineDone>();
         }
 
-        private void Start()
-        {
-            _positions = new List<Vector3>();
-        }
-
         public void VisualizeSequence(int angle, int iterationAmount)
         { 
+            //cleanup
             _spline.ClearAnchors();
+            Destroy(_endStreight);
+            
+            //create spline
             _spline.AddAnchor(_startPosition);
             var currentPosition = _startPosition;
             var direction = Vector3.forward;
@@ -48,12 +39,51 @@ namespace DefaultNamespace
                 currentPosition += direction * _length;
                 _spline.AddAnchor(currentPosition);
             }
+            
+            //update mesh
             _splineMesh.spline = _spline;
             _splineMesh.UpdateMesh();
-            var last = _spline.GetAnchorList().Last();
-            _finish.transform.position = last.position + new Vector3(0,5,0);
+            
+            //create prefabs and do finishing touches
+            _endStreight = Instantiate(prefab, currentPosition + direction * (prefab.transform.localScale.z/2),
+                Quaternion.Euler(new Vector3(0, (iterationAmount - 1) * angle, 0)));
+            
+            _finish.transform.position = _endStreight.transform.position + new Vector3(0,5,0) + direction * (prefab.transform.localScale.z/2);
             _finish.transform.rotation = Quaternion.Euler(new Vector3(0,(iterationAmount-1)*angle,0));
-            //Quaternion.Euler(Quaternion.AngleAxis(angle/2, Vector3.up) * _spline.GetPointList().Last().forward);
+        }
+
+        public SplineReturn GetSplineData(GameObject car)
+        {
+            var carTranform = car.transform;
+
+            var pointList = _spline.GetPointList();
+            int pointIndex = 0;
+            float distance = float.PositiveInfinity;
+            for(int i = 0; i< pointList.Count; i++)
+            {
+                var point = pointList[i];
+                var currentDistence = Vector3.Distance(carTranform.position, point.position);
+                if (currentDistence < distance)
+                {
+                    pointIndex = i;
+                    distance = currentDistence;
+                }
+            }
+
+            return new SplineReturn
+            {
+                Distance = distance,
+                Point = pointList[pointIndex],
+                RoadPercent = (pointIndex/pointList.Count)*100
+            };
+        }
+
+        public struct SplineReturn
+        {
+            public float Distance { get; set; }
+            public SplineDone.Point Point { get; set; }
+            public float RoadPercent { get; set; }
+            
         }
     }
 }
