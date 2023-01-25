@@ -74,7 +74,7 @@ namespace DefaultNamespace
             {
                 Distance = distance,
                 Point = pointList[pointIndex],
-                RoadPercent = (pointIndex/pointList.Count)*100
+                RoadPercent = ((float)pointIndex/pointList.Count)*100
             };
         }
 

@@ -36,7 +36,8 @@ namespace Logger
                 {
                     CurveAngle = _currentStreetAngle.Value,
                     Speed = _vehicle.speed,
-                    Steer = _vehicle.steer,
+                    Steering = _vehicle.steerInput,
+                    Brake = _vehicle.brakeInput,
                     Distance = statistics.Distance,
                     RoadPercentage = statistics.RoadPercent
                 });

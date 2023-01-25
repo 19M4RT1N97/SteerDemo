@@ -283,7 +283,6 @@ public class RCC_CarControllerV3 : RCC_Core {
     #region Inputs
     // Inputs. All values are clamped 0f - 1f. They will receive proper input values from RCC_InputManager class.
     public RCC_Inputs inputs;
-    public float steer;
     [HideInInspector] public float throttleInput = 0f;
     [HideInInspector] public float brakeInput = 0f;
     [HideInInspector] public float steerInput = 0f;
@@ -943,7 +942,6 @@ public class RCC_CarControllerV3 : RCC_Core {
             if (!externalController) {
 
                 inputs = RCC_InputManager.GetInputs();
-                steer = inputs.steerInput;
                 if (!automaticGear || semiAutomaticGear) {
                     if (!changingGear && !cutGas)
                         throttleInput = inputs.throttleInput;
