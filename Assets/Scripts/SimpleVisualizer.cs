@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -7,12 +8,10 @@ namespace DefaultNamespace
     public class SimpleVisualizer : MonoBehaviour
     {
         [SerializeField] private GameObject _finish;
-        [SerializeField] private GameObject prefab;
-        private float _length = 30f;
+        private float _length = 20f;
         private SplineDone _spline;
         private SplineMesh _splineMesh;
         private Vector3 _startPosition = new Vector3(0f, 0f, 90f);
-        private GameObject _endStreight;
         private void Awake()
         {
             _splineMesh = gameObject.AddComponent<SplineMesh>();
@@ -23,8 +22,7 @@ namespace DefaultNamespace
         { 
             //cleanup
             _spline.ClearAnchors();
-            Destroy(_endStreight);
-            
+
             //create spline
             _spline.AddAnchor(_startPosition);
             var currentPosition = _startPosition;
@@ -39,17 +37,16 @@ namespace DefaultNamespace
                 currentPosition += direction * _length;
                 _spline.AddAnchor(currentPosition);
             }
+            currentPosition += direction * _length/2;
+            _spline.AddAnchor(currentPosition);
+            _finish.transform.position = currentPosition + new Vector3(0,5,0) + direction;
+            _finish.transform.rotation = Quaternion.Euler(new Vector3(0,(iterationAmount-1)*angle,0));
+            currentPosition += direction * _length/4;
+            _spline.AddAnchor(currentPosition);
             
             //update mesh
             _splineMesh.spline = _spline;
             _splineMesh.UpdateMesh();
-            
-            //create prefabs and do finishing touches
-            _endStreight = Instantiate(prefab, currentPosition + direction * (prefab.transform.localScale.z/2),
-                Quaternion.Euler(new Vector3(0, (iterationAmount - 1) * angle, 0)));
-            
-            _finish.transform.position = _endStreight.transform.position + new Vector3(0,5,0) + direction * (prefab.transform.localScale.z/2);
-            _finish.transform.rotation = Quaternion.Euler(new Vector3(0,(iterationAmount-1)*angle,0));
         }
 
         public SplineReturn GetSplineData(GameObject car)

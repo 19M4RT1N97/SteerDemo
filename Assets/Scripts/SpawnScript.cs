@@ -59,10 +59,12 @@ public class SpawnScript : MonoBehaviour
         _logger = _vehicle.GetComponent<DriveLogger>();
         
         // var angle = _random.Next(0, 36)*5-90;//[-90, 90]
-        var angle = _random.Next(0, 20)*5-50;//[-50, 50]
+        //var angle = _random.Next(0, 20)*5-50;//[-50, 50]
+        var angle = _random.Next(0, 30)*5-75;//[-75, 75]
         
-        // _visualizer.VisualizeSequence(angle, 10-(int)math.sqrt(Math.Pow(angle/10,2)));
-        _visualizer.VisualizeSequence(angle, 10-(int)math.sqrt(Math.Pow(angle/10,2)));
+        // _visualizer.VisualizeSequence(angle, 10-Math.Abs(angle/10));
+        _visualizer.VisualizeSequence(angle, 4);
+        
         _start.StreetAngle = angle;
         _start.Car = _vehicle;
         _startTime = null;
