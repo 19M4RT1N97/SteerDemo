@@ -50,11 +50,10 @@ public class SplineMesh : MonoBehaviour {
                 MeshUtils.AddLinePoint(mesh, thisPoint.position - transform.position, thisPoint.forward, point.normal, meshWidth);
             }
             
-            meshFilter.sharedMesh = mesh;
             meshFilter.mesh = mesh;
-            meshFilter.gameObject.layer = 3;
+            meshFilter.gameObject.layer = 3; //road layer
             meshCollider.sharedMesh = mesh;
-            meshCollider.gameObject.layer = 3;
+            meshCollider.gameObject.layer = 3; //road layer
         }
     }
 

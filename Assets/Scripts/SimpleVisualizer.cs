@@ -22,7 +22,7 @@ namespace DefaultNamespace
             debugList = new List<GameObject>();
         }
 
-        public void VisualizeSequence(int angle, int iterationAmount)
+        public void Visualize(int angle, int iterationAmount)
         { 
             //cleanup
             _spline.ClearAnchors();
@@ -44,15 +44,12 @@ namespace DefaultNamespace
                     direction = Quaternion.AngleAxis(angle, Vector3.up) * direction;
                     sideways = Quaternion.AngleAxis(angle, Vector3.up) * sideways;
                 }
-                currentPosition += direction * _length;
-                _spline.AddAnchor(currentPosition, sideways);
+                currentPosition = AddAnchorPoint(currentPosition, direction, sideways, _length);
             }
-            currentPosition += direction * _length/2;
-            _spline.AddAnchor(currentPosition, sideways);
+            AddAnchorPoint(currentPosition, direction, sideways, _length/2);
             _finish.transform.position = currentPosition + new Vector3(0,5,0) + direction;
             _finish.transform.rotation = Quaternion.Euler(new Vector3(0,(iterationAmount-1)*angle,0));
-            currentPosition += direction * _length/4;
-            _spline.AddAnchor(currentPosition, sideways);
+            AddAnchorPoint(currentPosition, direction, sideways, _length/4);
             
             //update mesh
             _splineMesh.spline = _spline;
@@ -86,7 +83,7 @@ namespace DefaultNamespace
             {
                 Distance = distance,
                 Point = pointList[pointIndex],
-                RoadPercent = ((float)pointIndex/pointList.Count)*100
+                RoadPercent = (float)pointIndex/(pointList.Count-1)*100
             };
         }
 
@@ -98,6 +95,13 @@ namespace DefaultNamespace
             
         }
 
+        private Vector3 AddAnchorPoint(Vector3 position, Vector3 direction, Vector3 connectionPoints, float length)
+        {
+            position += direction * length;
+            _spline.AddAnchor(position, connectionPoints);
+            return position;
+        }
+        
         private void PrintDebug(IEnumerable<Vector3> posList)
         {
             foreach (var p in posList)

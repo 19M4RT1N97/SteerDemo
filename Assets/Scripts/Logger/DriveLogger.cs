@@ -13,49 +13,67 @@ namespace Logger
     public class DriveLogger : MonoBehaviour
     {
         [SerializeField] private string FileName;
-        private static List<DriverLog> DriverLog { get; set; }
+        private static List<DriverLog> DriverLog; 
         private RCC_CarControllerV3 _vehicle;
-        public int? _currentStreetAngle;
-        private GameObject _car;
         private SimpleVisualizer _visualizer;
+        private bool _logging;
+     
+        public int? CurrentStreetAngle;
+        public int? RecSpeed;
         
         public void Start()
         {
             _vehicle = gameObject.GetComponent<RCC_CarControllerV3>();
-            
             _visualizer = GameObject.Find("SimpleVisualizer").GetComponent<SimpleVisualizer>();
-            ResetLogging();
         }
 
         public void FixedUpdate()
-        {
-            if (_currentStreetAngle.HasValue)
+        {Debug.Log(CurrentStreetAngle.HasValue);
+            if (_logging)
             {
-                var statistics = _visualizer.GetSplineData(_car);
-                DriverLog.Add(new DriverLog
+                if (DriverLog == null)
+                    DriverLog = new List<DriverLog>();
+                if (CurrentStreetAngle.HasValue && RecSpeed.HasValue)
                 {
-                    CurveAngle = _currentStreetAngle.Value,
-                    Speed = _vehicle.speed,
-                    Steering = _vehicle.steerInput,
-                    Brake = _vehicle.brakeInput,
-                    Distance = statistics.Distance,
-                    RoadPercentage = statistics.RoadPercent
-                });
+                    var statistics = _visualizer.GetSplineData(_vehicle.gameObject);
+                    DriverLog.Add(new DriverLog
+                    {
+                        CurveAngle = CurrentStreetAngle.Value,
+                        Speed = _vehicle.speed,
+                        RecSpeed = RecSpeed.Value,
+                        Steering = _vehicle.inputs.steerInput,
+                        Brake = _vehicle.inputs.brakeInput,
+                        Throttle = _vehicle.inputs.throttleInput,
+                        Distance = statistics.Distance,
+                        RoadPercentage = statistics.RoadPercent
+                    });
+                }
             }
         }
         
         public void ResetLogging()
         {
             DriverLog = new List<DriverLog>();
-            _currentStreetAngle = null;
+            CurrentStreetAngle = null;
+            RecSpeed = null;
+            _vehicle = null;
+            _logging = false;
         }
 
         public void FinishDriverLog()
         {
             var filePath = FileName;
             Log(filePath);
+            ResetLogging();
         }
 
+        public void SetLoggingValues(RCC_CarControllerV3 vehicle, int angle, int recSpeed)
+        {
+            _vehicle = vehicle;
+            CurrentStreetAngle = angle;
+            RecSpeed = recSpeed;
+        }
+        
         private void Log(string path)
         {
             var newFile = File.Exists(path);
@@ -81,13 +99,11 @@ namespace Logger
             }
         }
 
-        private void OnTriggerEnter(Collider other)
+        public void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag("Start"))
+            if (other.name.Equals("Start"))
             {
-                var start = other.GetComponent<StartBoxScript>();
-                _currentStreetAngle = start.StreetAngle;
-                _car = start.Car;
+                _logging = true;
             }
         }
     }

@@ -15544,7 +15544,7 @@ GameObject:
   - component: {fileID: 4614604553536388}
   - component: {fileID: 54445428651654046}
   - component: {fileID: 114571143157923052}
-  - component: {fileID: 7776588597111825530}
+  - component: {fileID: 3211618099801085289}
   m_Layer: 8
   m_Name: Model_Skyline
   m_TagString: Car
@@ -15905,7 +15905,7 @@ MonoBehaviour:
   useNOS: 1
   useTurbo: 1
   attachedTrailer: {fileID: 0}
---- !u!114 &7776588597111825530
+--- !u!114 &3211618099801085289
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
