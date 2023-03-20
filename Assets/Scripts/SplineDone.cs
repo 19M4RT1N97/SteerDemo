@@ -85,97 +85,7 @@ public class SplineDone : MonoBehaviour {
         }
     }
 
-    public Vector3 GetForwardAt(float t) {
-        Point pointA = GetPreviousPoint(t);
-
-        int pointBIndex;
-
-        pointBIndex = (pointList.IndexOf(pointA) + 1) % pointList.Count;
-        Point pointB = pointList[pointBIndex];
-
-        return Vector3.Lerp(pointA.forward, pointB.forward, (t - pointA.t) / Mathf.Abs(pointA.t - pointB.t));
-    }
-
-    public Point GetPreviousPoint(float t) {
-        int previousIndex = 0;
-        for (int i=1; i<pointList.Count; i++) {
-            Point point = pointList[i];
-            if (t < point.t) {
-                return pointList[previousIndex];
-            } else {
-                previousIndex++;
-            }
-        }
-        return pointList[previousIndex];
-    }
-
-    public Point GetClosestPoint(float t) {
-        Point closestPoint = pointList[0];
-        foreach (Point point in pointList) {
-            if (Mathf.Abs(t - point.t) < Mathf.Abs(t - closestPoint.t)) {
-                closestPoint = point;
-            }
-        }
-        return closestPoint;
-    }
-
-    public Vector3 GetPositionAtUnits(float unitDistance, float stepSize = .01f) {
-        float splineUnitDistance = 0f;
-
-        Vector3 lastPosition = GetPositionAt(0f);
-
-        float incrementAmount = stepSize;
-        for (float t = 0; t < 1f; t += incrementAmount) {
-            splineUnitDistance += Vector3.Distance(lastPosition, GetPositionAt(t));
-
-            lastPosition = GetPositionAt(t);
-
-            if (splineUnitDistance >= unitDistance) {
-                /*
-                float remainingDistance = splineUnitDistance - unitDistance;
-                Debug.Log(remainingDistance + " " + unitDistance + " " + splineUnitDistance + " " + t);
-                Debug.Log(t - (remainingDistance / splineLength));
-                return GetPositionAt(t - (remainingDistance / splineLength));
-                */
-                Vector3 direction = (GetPositionAt(t) - GetPositionAt(t - incrementAmount)).normalized;
-                return GetPositionAt(t) + direction * (unitDistance - splineUnitDistance);
-            }
-        }
-
-        // Default
-        Anchor anchorA = anchorList[0];
-        Anchor anchorB = anchorList[1];
-        return CubicLerp(anchorA.position, anchorA.handleBPosition, anchorB.handleAPosition, anchorB.position, unitDistance / splineLength);
-    }
-
-    public Vector3 GetForwardAtUnits(float unitDistance, float stepSize = .01f) {
-        float splineUnitDistance = 0f;
-
-        Vector3 lastPosition = GetPositionAt(0f);
-
-        float incrementAmount = stepSize;
-        float lastDistance = 0f;
-
-        for (float t = 0; t < 1f; t += incrementAmount) {
-            lastDistance = Vector3.Distance(lastPosition, GetPositionAt(t));
-            splineUnitDistance += lastDistance;
-
-            lastPosition = GetPositionAt(t);
-
-            if (splineUnitDistance >= unitDistance) {
-                float remainingDistance = splineUnitDistance - unitDistance;
-                return GetForwardAt(t - ((remainingDistance / lastDistance) * incrementAmount));
-            }
-
-        }
-
-        // Default
-        Anchor anchorA = anchorList[0];
-        Anchor anchorB = anchorList[1];
-        return CubicLerp(anchorA.position, anchorA.handleBPosition, anchorB.handleAPosition, anchorB.position, unitDistance / splineLength);
-    }
-
-    public void SetupPointList() {
+    public List<Point> SetupPointList() {
         pointList = new List<Point>();
         pointAmountInCurve = pointAmountPerUnitInCurve * GetSplineLength();
         for (float t = 0; t < 1f; t += 1f / pointAmountInCurve) {
@@ -192,16 +102,8 @@ public class SplineDone : MonoBehaviour {
         });
 
         UpdateForwardVectors();
-    }
 
-    private void UpdatePointList() {
-        if (pointList == null) return;
-
-        foreach (Point point in pointList) {
-            point.position = GetPositionAt(point.t);
-        }
-        
-        UpdateForwardVectors();
+        return pointList;
     }
 
     public void UpdateForwardVectors() {
@@ -242,24 +144,14 @@ public class SplineDone : MonoBehaviour {
         return splineLength;
     }
 
-    public List<Anchor> GetAnchorList() {
-        return anchorList;
-    }
-
     public void AddAnchor(Vector3 newPos, Vector3 direction) {
         if (anchorList == null) anchorList = new List<Anchor>();
         
         anchorList.Add(new Anchor {
                 position = newPos,
-                handleAPosition = newPos+direction*5,
-                handleBPosition = newPos-direction*5
+                handleAPosition = newPos+direction*1.3f,
+                handleBPosition = newPos-direction*1.3f
             });
-    }
-
-    public void RemoveLastAnchor() {
-        if (anchorList == null) anchorList = new List<Anchor>();
-
-        anchorList.RemoveAt(anchorList.Count - 1);
     }
 
 
@@ -267,33 +159,6 @@ public class SplineDone : MonoBehaviour {
         return pointList;
     }
 
-    public bool GetClosedLoop() {
-        return closedLoop;
-    }
-
-    public void SetAllZZero() {
-        foreach (Anchor anchor in anchorList) {
-            anchor.position = new Vector3(anchor.position.x, anchor.position.y, 0f);
-            anchor.handleAPosition = new Vector3(anchor.handleAPosition.x, anchor.handleAPosition.y, 0f);
-            anchor.handleBPosition = new Vector3(anchor.handleBPosition.x, anchor.handleBPosition.y, 0f);
-        }
-    }
-
-    public void SetAllYZero() {
-        foreach (Anchor anchor in anchorList) {
-            anchor.position = new Vector3(anchor.position.x, 0f, anchor.position.z);
-            anchor.handleAPosition = new Vector3(anchor.handleAPosition.x, 0f, anchor.handleAPosition.z);
-            anchor.handleBPosition = new Vector3(anchor.handleBPosition.x, 0f, anchor.handleBPosition.z);
-        }
-    }
-
-    public void SetDirty() {
-        splineLength = GetSplineLength();
-        UpdatePointList();
-
-        OnDirty?.Invoke(this, EventArgs.Empty);
-    }
-    
     public void ClearAnchors()
     {
         if (anchorList != null)

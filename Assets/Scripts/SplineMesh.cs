@@ -37,9 +37,8 @@ public class SplineMesh : MonoBehaviour {
             mesh = null;
         }
 
-        spline.SetupPointList();
-        spline.UpdateForwardVectors();
-        List<SplineDone.Point> pointList = spline.GetPointList();
+        List<SplineDone.Point> pointList = spline.SetupPointList();
+        
         if (pointList.Count > 2) {
             SplineDone.Point point = pointList[0];
             SplineDone.Point secondPoint = pointList[1];

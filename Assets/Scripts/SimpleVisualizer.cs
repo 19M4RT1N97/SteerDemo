@@ -54,11 +54,6 @@ namespace DefaultNamespace
             //update mesh
             _splineMesh.spline = _spline;
             _splineMesh.UpdateMesh();
-            
-            //debug
-            //_spline.SetupPointList();
-            //PrintDebug(_spline.GetPointList().Select(a => a.position));
-            // PrintDebug(_spline.GetAnchorList().Select(a => a.position));
         }
 
         public SplineReturn GetSplineData(GameObject car)
