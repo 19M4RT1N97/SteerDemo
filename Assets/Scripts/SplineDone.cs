@@ -1,16 +1,10 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class SplineDone : MonoBehaviour {
-
-    private static readonly Vector3 normal2D = new Vector3(0, 1f, 0);
-
     public event EventHandler OnDirty;
-
-    [SerializeField] private Transform dots = null;
+    
     [SerializeField] private Vector3 normal = new Vector3(0, 1, 0);
     [SerializeField] private bool closedLoop;
     [SerializeField] private List<Anchor> anchorList;

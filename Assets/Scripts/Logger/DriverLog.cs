@@ -1,5 +1,5 @@
 using System;
-using UnityEngine;
+using System.Globalization;
 
 namespace Logger
 {
@@ -7,7 +7,7 @@ namespace Logger
     {
         public DriverLog()
         {
-            TimeStamp = DateTime.Now.ToString("hh:mm:ss.fff");
+            TimeStamp = DateTime.Now.ToString("HH:mm:ss.fff");
         }
         private readonly string TimeStamp;
         

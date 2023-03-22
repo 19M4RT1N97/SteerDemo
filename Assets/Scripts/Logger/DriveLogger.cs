@@ -1,12 +1,9 @@
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using DefaultNamespace;
-using UnityEditor.SceneManagement;
 using UnityEngine;
-
 
 namespace Logger
 {
@@ -28,7 +25,7 @@ namespace Logger
         }
 
         public void FixedUpdate()
-        {Debug.Log(CurrentStreetAngle.HasValue);
+        {
             if (_logging)
             {
                 if (DriverLog == null)
