@@ -19,12 +19,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 2560
-    height: 1307
-  m_MinSize: {x: 400, y: 200}
-  m_MaxSize: {x: 32384, y: 16192}
+    width: 1920
+    height: 939
+  m_MinSize: {x: 300, y: 200}
+  m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: -1
+  controlID: 3035
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -46,10 +46,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1141
+    x: 200
     y: 73
-    width: 826
-    height: 804
+    width: 1275
+    height: 610
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -62,7 +62,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 826, y: 465}
+  m_TargetSize: {x: 1047, y: 589}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -77,10 +77,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -413
-    m_HBaseRangeMax: 413
-    m_VBaseRangeMin: -232.5
-    m_VBaseRangeMax: 232.5
+    m_HBaseRangeMin: -523.5
+    m_HBaseRangeMax: 523.5
+    m_VBaseRangeMin: -294.5
+    m_VBaseRangeMax: 294.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -89,7 +89,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -98,23 +98,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 826
-      height: 783
+      width: 1275
+      height: 589
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 413, y: 391.5}
+    m_Translation: {x: 637.5, y: 294.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -413
-      y: -391.5
-      width: 826
-      height: 783
+      x: -637.5
+      y: -294.5
+      width: 1275
+      height: 589
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 826, y: 804}
+  m_LastWindowPixelSize: {x: 1275, y: 610}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -139,12 +139,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1969
-    height: 1307
-  m_MinSize: {x: 300, y: 200}
-  m_MaxSize: {x: 24288, y: 16192}
+    width: 1477
+    height: 939
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: -1
+  controlID: 3036
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -160,17 +160,16 @@ MonoBehaviour:
   m_Children:
   - {fileID: 5}
   - {fileID: 7}
-  - {fileID: 9}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1969
-    height: 825
-  m_MinSize: {x: 300, y: 100}
-  m_MaxSize: {x: 24288, y: 8096}
+    width: 1477
+    height: 631
+  m_MinSize: {x: 200, y: 100}
+  m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: -1
+  controlID: 3037
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -188,8 +187,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 482
-    height: 825
+    width: 200
+    height: 631
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 6}
@@ -220,8 +219,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73
-    width: 481
-    height: 804
+    width: 199
+    height: 610
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -229,9 +228,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 76170000
       m_LastClickedID: 0
-      m_ExpandedIDs: 96faffff8e7a0000b07a0000
+      m_ExpandedIDs: 34fbffff82780000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -247,7 +246,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 9}
+        m_ClientGUIView: {fileID: 5}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -265,22 +264,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
+  m_Name: GameView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 482
+    x: 200
     y: 0
-    width: 659
-    height: 825
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 8}
+    width: 1277
+    height: 631
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 2}
   m_Panes:
+  - {fileID: 2}
   - {fileID: 8}
+  - {fileID: 9}
   m_Selected: 0
-  m_LastSelected: 0
+  m_LastSelected: 2
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -302,10 +303,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 482
+    x: 200
     y: 73
-    width: 657
-    height: 804
+    width: 1275
+    height: 610
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -326,9 +327,9 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: -141, y: 149}
+      snapOffset: {x: 0, y: 149}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 1
+      snapCorner: 0
       id: unity-grid-and-snap-toolbar
       index: 1
       layout: 1
@@ -337,7 +338,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 25}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-scene-view-toolbar
@@ -564,18 +565,18 @@ MonoBehaviour:
       index: 13
       layout: 4
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
-  m_Gizmos: 1
+  m_Gizmos: 0
   m_OverrideSceneCullingMask: 6917529027641081856
-  m_SceneIsLit: 0
+  m_SceneIsLit: 1
   m_SceneLighting: 1
   m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -77.36502, y: 67.938446, z: 146.6674}
+    m_Target: {x: -35.807045, y: -10.88815, z: 3.7201324}
     speed: 2
-    m_Value: {x: -77.36502, y: 67.938446, z: 146.6674}
+    m_Value: {x: -35.807045, y: -10.88815, z: 3.7201324}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -592,7 +593,7 @@ MonoBehaviour:
     showImageEffects: 1
     showParticleSystems: 1
     showVisualEffectGraphs: 1
-    m_FxEnabled: 0
+    m_FxEnabled: 1
   m_Grid:
     xGrid:
       m_Fade:
@@ -622,13 +623,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.038995482, y: 0.953393, z: -0.12548195, w: 0.27253574}
+    m_Target: {x: 0.1026812, y: -0.7329952, z: 0.11627771, w: 0.6626056}
     speed: 2
-    m_Value: {x: 0.038609203, y: 0.9539677, z: -0.12556696, w: 0.2696069}
+    m_Value: {x: 0.10266108, y: -0.73285156, z: 0.116254926, w: 0.66247576}
   m_Size:
-    m_Target: 3.4968305
+    m_Target: 24.808928
     speed: 2
-    m_Value: 3.4968305
+    m_Value: 24.808928
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -662,23 +663,885 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: GameView
+  m_Script: {fileID: 11500000, guid: eb55afc2c109f42f2af37941a8c9300e, type: 3}
+  m_Name: 
   m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 1141
-    y: 0
-    width: 828
-    height: 825
-  m_MinSize: {x: 200, y: 200}
+  m_MinSize: {x: 600, y: 300}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 2}
-  m_Panes:
-  - {fileID: 2}
-  m_Selected: 0
-  m_LastSelected: 0
+  m_TitleContent:
+    m_Text: RCC_InputActions (Input Actions)
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 200
+    y: 73
+    width: 1275
+    height: 610
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_ActionMapsTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: b329208f
+    m_LastClickedID: -1893717581
+    m_ExpandedIDs: 00000000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 0
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 
+  m_ActionsTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 39e3f92d
+    m_LastClickedID: 771351353
+    m_ExpandedIDs: 036ebb87b329208f3424c6acacf873fc
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 0
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 
+  m_ControlPickerViewState:
+    m_AdvancedDropdownState:
+      states:
+      - itemId: 371857150
+        selectedIndex: 3
+        scroll: {x: 0, y: 0}
+      - itemId: 403810634
+        selectedIndex: 1
+        scroll: {x: 0, y: 0}
+      - itemId: -376880915
+        selectedIndex: -1
+        scroll: {x: 0, y: 0}
+      - itemId: 1277967432
+        selectedIndex: 10
+        scroll: {x: 0, y: 0}
+      - itemId: 1340379803
+        selectedIndex: -1
+        scroll: {x: 0, y: 80.5}
+      - itemId: 1838211104
+        selectedIndex: -1
+        scroll: {x: 0, y: 0}
+      - itemId: 1434926577
+        selectedIndex: -1
+        scroll: {x: 0, y: 0}
+      - itemId: 1838211105
+        selectedIndex: -1
+        scroll: {x: 0, y: 0}
+      - itemId: -1805501826
+        selectedIndex: -1
+        scroll: {x: 0, y: 0}
+      - itemId: -903749156
+        selectedIndex: -1
+        scroll: {x: 0, y: 0}
+      - itemId: 1845683271
+        selectedIndex: 0
+        scroll: {x: 0, y: 0}
+    m_ManualPathEditMode: 0
+  m_ActionAssetManager:
+    m_AssetObjectForEditing: {fileID: 0}
+    m_ImportedAssetObject: {fileID: -944628639613478452, guid: c84b5e0a5a37cfa46bda329025c1291d,
+      type: 3}
+    m_AssetGUID: c84b5e0a5a37cfa46bda329025c1291d
+    m_ImportedAssetJson: "{\n    \"name\": \"RCC_InputActions\",\n    \"maps\": [\n       
+      {\n            \"name\": \"Vehicle\",\n            \"id\": \"dab82b1c-787e-4a36-b968-b40e68121a11\",\n           
+      \"actions\": [\n                {\n                    \"name\": \"Throttle\",\n                   
+      \"type\": \"Value\",\n                    \"id\": \"90dd0b16-b17c-4e2f-816d-3f6f472fbe4d\",\n                   
+      \"expectedControlType\": \"Axis\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"\",\n                    \"initialStateCheck\": true\n               
+      },\n                {\n                    \"name\": \"Brake\",\n                   
+      \"type\": \"Value\",\n                    \"id\": \"fd45c78a-8d28-433b-938d-216a05e39978\",\n                   
+      \"expectedControlType\": \"Axis\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"\",\n                    \"initialStateCheck\": true\n               
+      },\n                {\n                    \"name\": \"Steering\",\n                   
+      \"type\": \"Value\",\n                    \"id\": \"07554ee5-17d2-4f02-a18b-c167de4685b5\",\n                   
+      \"expectedControlType\": \"Axis\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"\",\n                    \"initialStateCheck\": true\n               
+      },\n                {\n                    \"name\": \"Handbrake\",\n                   
+      \"type\": \"Button\",\n                    \"id\": \"862a1da3-327a-425f-bc3a-c144667b0f07\",\n                   
+      \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"\",\n                    \"initialStateCheck\": false\n               
+      },\n                {\n                    \"name\": \"Start/Stop Engine\",\n                   
+      \"type\": \"Button\",\n                    \"id\": \"665ce79b-380f-460c-954c-a66e8d7f6868\",\n                   
+      \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"Press\",\n                    \"initialStateCheck\": false\n               
+      },\n                {\n                    \"name\": \"Low Beam Lights\",\n                   
+      \"type\": \"Button\",\n                    \"id\": \"372f474d-e084-434c-8671-5dde678119fc\",\n                   
+      \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"Press\",\n                    \"initialStateCheck\": false\n               
+      },\n                {\n                    \"name\": \"High Beam Lights\",\n                   
+      \"type\": \"Button\",\n                    \"id\": \"ce045397-f3db-4d56-a9ab-f15b8d6284f3\",\n                   
+      \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"Press\",\n                    \"initialStateCheck\": false\n               
+      },\n                {\n                    \"name\": \"Indicator Right\",\n                   
+      \"type\": \"Button\",\n                    \"id\": \"a5494e84-44f4-4747-a2bc-8c888e6c6981\",\n                   
+      \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"Press\",\n                    \"initialStateCheck\": false\n               
+      },\n                {\n                    \"name\": \"Indicator Left\",\n                   
+      \"type\": \"Button\",\n                    \"id\": \"8c0cd9f5-2c12-4dda-867e-68ac4f8d12a7\",\n                   
+      \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"Press\",\n                    \"initialStateCheck\": false\n               
+      },\n                {\n                    \"name\": \"Indicator Hazard\",\n                   
+      \"type\": \"Button\",\n                    \"id\": \"2cf3bd64-7349-45c4-bd17-ac5c026c14f3\",\n                   
+      \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"Press\",\n                    \"initialStateCheck\": false\n               
+      },\n                {\n                    \"name\": \"Gear Shift Up\",\n                   
+      \"type\": \"Button\",\n                    \"id\": \"bfed3200-a183-457f-89e2-4728ba190654\",\n                   
+      \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"Press\",\n                    \"initialStateCheck\": false\n               
+      },\n                {\n                    \"name\": \"Gear Shift Down\",\n                   
+      \"type\": \"Button\",\n                    \"id\": \"60814594-0217-41d9-be0b-f732e6e15ec1\",\n                   
+      \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"Press\",\n                    \"initialStateCheck\": false\n               
+      },\n                {\n                    \"name\": \"NOS\",\n                   
+      \"type\": \"Value\",\n                    \"id\": \"724bd134-194c-493a-8539-b6045edcdcd5\",\n                   
+      \"expectedControlType\": \"Axis\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"Press\",\n                    \"initialStateCheck\": true\n               
+      },\n                {\n                    \"name\": \"Trailer Detach\",\n                   
+      \"type\": \"Button\",\n                    \"id\": \"436e8ef9-e6d5-4264-92e2-aa09d5704ea7\",\n                   
+      \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"Press\",\n                    \"initialStateCheck\": false\n               
+      },\n                {\n                    \"name\": \"N Gear\",\n                   
+      \"type\": \"Button\",\n                    \"id\": \"c730406c-3f6f-4378-9425-575126e2ffe9\",\n                   
+      \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"Press\",\n                    \"initialStateCheck\": false\n               
+      },\n                {\n                    \"name\": \"1stGear\",\n                   
+      \"type\": \"Button\",\n                    \"id\": \"faa60fae-83d3-468d-9047-242f9aed211f\",\n                   
+      \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"Press\",\n                    \"initialStateCheck\": false\n               
+      },\n                {\n                    \"name\": \"2ndGear\",\n                   
+      \"type\": \"Button\",\n                    \"id\": \"065a4580-591d-4266-acf7-9d98d3363a8b\",\n                   
+      \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"Press\",\n                    \"initialStateCheck\": false\n               
+      },\n                {\n                    \"name\": \"3rdGear\",\n                   
+      \"type\": \"Button\",\n                    \"id\": \"2406bc0d-f79a-40c9-a124-3bb7e223376d\",\n                   
+      \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"Press\",\n                    \"initialStateCheck\": false\n               
+      },\n                {\n                    \"name\": \"4thGear\",\n                   
+      \"type\": \"Button\",\n                    \"id\": \"47dc584e-88a1-4fb1-b3a1-a618860c4981\",\n                   
+      \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"Press\",\n                    \"initialStateCheck\": false\n               
+      },\n                {\n                    \"name\": \"5thGear\",\n                   
+      \"type\": \"Button\",\n                    \"id\": \"292f9c56-7502-4eb7-8ea9-807f40b45681\",\n                   
+      \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"Press\",\n                    \"initialStateCheck\": false\n               
+      },\n                {\n                    \"name\": \"6thGear\",\n                   
+      \"type\": \"Button\",\n                    \"id\": \"72cd6b51-4b79-4956-979a-fead73af3865\",\n                   
+      \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"Press\",\n                    \"initialStateCheck\": false\n               
+      },\n                {\n                    \"name\": \"RGear\",\n                   
+      \"type\": \"Button\",\n                    \"id\": \"9586b554-9d81-4d23-9217-bb33ac196bce\",\n                   
+      \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"Press\",\n                    \"initialStateCheck\": false\n               
+      },\n                {\n                    \"name\": \"Clutch\",\n                   
+      \"type\": \"Value\",\n                    \"id\": \"74b6b726-c60c-461c-b6c3-28e27b55d665\",\n                   
+      \"expectedControlType\": \"Axis\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"Press\",\n                    \"initialStateCheck\": true\n               
+      }\n            ],\n            \"bindings\": [\n                {\n                   
+      \"name\": \"arrows\",\n                    \"id\": \"f11f01e4-cf2c-47ed-ab18-9f957fe8913a\",\n                   
+      \"path\": \"1DAxis(minValue=0)\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"Throttle\",\n                    \"isComposite\": true,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"negative\",\n                    \"id\": \"e0cd1536-dbc9-4a1c-85e1-a1a092c6d2dc\",\n                   
+      \"path\": \"\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard Mouse\",\n                   
+      \"action\": \"Throttle\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"positive\",\n                    \"id\": \"a1ba4f3e-7db4-494b-94a9-609e76725d20\",\n                   
+      \"path\": \"<Keyboard>/upArrow\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard Mouse\",\n                   
+      \"action\": \"Throttle\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"wasd\",\n                    \"id\": \"3fdb6416-2def-4c85-8aaa-8bc786eee672\",\n                   
+      \"path\": \"1DAxis(minValue=0)\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard Mouse\",\n                   
+      \"action\": \"Throttle\",\n                    \"isComposite\": true,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"negative\",\n                    \"id\": \"20f6ae90-cf5c-4fdf-a3b2-156ecb775171\",\n                   
+      \"path\": \"\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard Mouse\",\n                   
+      \"action\": \"Throttle\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"positive\",\n                    \"id\": \"1f637e88-9cd0-42a6-93cf-ce55b89ff212\",\n                   
+      \"path\": \"<Keyboard>/w\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard Mouse\",\n                   
+      \"action\": \"Throttle\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"gamepads\",\n                    \"id\": \"34d118d2-ab65-4ccd-bb89-78a9a042d4de\",\n                   
+      \"path\": \"1DAxis(minValue=0)\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"Throttle\",\n                    \"isComposite\": true,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"negative\",\n                    \"id\": \"af0c3935-4ef0-4f3b-8a8d-13853137f6db\",\n                   
+      \"path\": \"\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Gamepad\",\n                   
+      \"action\": \"Throttle\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"positive\",\n                    \"id\": \"e323a5f2-36c3-459c-813e-d6bbb9e3bac7\",\n                   
+      \"path\": \"<Gamepad>/rightTrigger\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"Gamepad\",\n                    \"action\": \"Throttle\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": true\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"b7f469da-1f0b-4649-a1d2-d5c6795d48b5\",\n                    \"path\":
+      \"<OculusTouchController>{RightHand}/trigger\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"Oculus Quest\",\n                    \"action\": \"Throttle\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"1D Axis\",\n                   
+      \"id\": \"0588fe89-e86a-4501-b207-2b4fbd79490a\",\n                    \"path\":
+      \"1DAxis(minValue=0)\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"Invert\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"Throttle\",\n                    \"isComposite\": true,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"negative\",\n                    \"id\": \"af608471-20e3-4ade-ba03-07e0983e92b8\",\n                   
+      \"path\": \"\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"Throttle\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"positive\",\n                    \"id\": \"2c85c415-304e-48f6-b1c6-d724fd13695e\",\n                   
+      \"path\": \"<HID::Logitech G29 Driving Force Racing Wheel>/z\",\n                   
+      \"interactions\": \"\",\n                    \"processors\": \"\",\n                   
+      \"groups\": \"\",\n                    \"action\": \"Throttle\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": true\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"c86264ee-e235-44e4-beed-6b1529b25a10\",\n                    \"path\":
+      \"<HID::Logitech G29 Driving Force Racing Wheel>/z\",\n                   
+      \"interactions\": \"\",\n                    \"processors\": \"Invert,Clamp(max=1)\",\n                   
+      \"groups\": \"G920\",\n                    \"action\": \"Throttle\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"keyboard\",\n                   
+      \"id\": \"719ca6b9-d323-4341-8e55-caa156a602e8\",\n                    \"path\":
+      \"1DAxis(minValue=0)\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"Handbrake\",\n                    \"isComposite\": true,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"negative\",\n                    \"id\": \"4d2b585c-6f0c-4907-8009-b23e2a8bfce1\",\n                   
+      \"path\": \"\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard Mouse\",\n                   
+      \"action\": \"Handbrake\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"positive\",\n                    \"id\": \"ebd5b62c-f128-414b-8280-7decced19010\",\n                   
+      \"path\": \"<Keyboard>/space\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard Mouse\",\n                   
+      \"action\": \"Handbrake\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"gamepads\",\n                    \"id\": \"3d7e56ad-b8c0-434a-8415-72fa857776ac\",\n                   
+      \"path\": \"1DAxis(minValue=0)\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"Handbrake\",\n                    \"isComposite\": true,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"negative\",\n                    \"id\": \"bab83804-84b2-4e39-9fc1-9bb9787d2a60\",\n                   
+      \"path\": \"\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Gamepad\",\n                   
+      \"action\": \"Handbrake\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"positive\",\n                    \"id\": \"3db07aa2-78b1-4e62-869e-5540b1d2ea11\",\n                   
+      \"path\": \"<Gamepad>/buttonSouth\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"Gamepad\",\n                    \"action\": \"Handbrake\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": true\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"5aaefde0-b9f2-4263-ada8-08c4754560fc\",\n                    \"path\":
+      \"<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/button2\",\n                   
+      \"interactions\": \"\",\n                    \"processors\": \"\",\n                   
+      \"groups\": \"G920\",\n                    \"action\": \"Handbrake\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"3cbd8e1e-8b86-4741-8cb2-876fb108b2a3\",\n                    \"path\":
+      \"<OculusTouchController>{RightHand}/primaryButton\",\n                   
+      \"interactions\": \"\",\n                    \"processors\": \"\",\n                   
+      \"groups\": \"Oculus Quest\",\n                    \"action\": \"Handbrake\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"wasd\",\n                   
+      \"id\": \"a135f3bc-f45c-479f-ad28-b4581890cd28\",\n                    \"path\":
+      \"1DAxis(minValue=0)\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"Brake\",\n                    \"isComposite\": true,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"negative\",\n                    \"id\": \"b1647269-c5f0-41dc-b651-b4e2f87d8fdb\",\n                   
+      \"path\": \"\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard Mouse\",\n                   
+      \"action\": \"Brake\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"positive\",\n                    \"id\": \"f7d779b9-21fe-4e3d-9744-a94e504b04fc\",\n                   
+      \"path\": \"<Keyboard>/s\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard Mouse\",\n                   
+      \"action\": \"Brake\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"arrows\",\n                    \"id\": \"c8307ec0-22ef-43bb-8351-b6aef882fa5f\",\n                   
+      \"path\": \"1DAxis(minValue=0)\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"Brake\",\n                    \"isComposite\": true,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"negative\",\n                    \"id\": \"b17286eb-c31a-424d-97bc-ffc8ee35b47a\",\n                   
+      \"path\": \"\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard Mouse\",\n                   
+      \"action\": \"Brake\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"positive\",\n                    \"id\": \"9ee6ed4f-8f71-47d6-af83-3d0b1e20860c\",\n                   
+      \"path\": \"<Keyboard>/downArrow\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"Keyboard Mouse\",\n                    \"action\": \"Brake\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": true\n               
+      },\n                {\n                    \"name\": \"gamepads\",\n                   
+      \"id\": \"885ad1e3-b856-4be1-a7cb-32bb8bfb2b88\",\n                    \"path\":
+      \"1DAxis(minValue=0)\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"Brake\",\n                    \"isComposite\": true,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"negative\",\n                    \"id\": \"6a9790aa-c6f0-48b7-b93c-c2d033442261\",\n                   
+      \"path\": \"\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Gamepad\",\n                   
+      \"action\": \"Brake\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"positive\",\n                    \"id\": \"69462041-e882-40fd-bed8-deff21837f89\",\n                   
+      \"path\": \"<Gamepad>/leftTrigger\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"Gamepad\",\n                    \"action\": \"Brake\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": true\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"aaf2efcb-4c14-4b5f-8669-de517f4ad583\",\n                    \"path\":
+      \"<OculusTouchController>{LeftHand}/trigger\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"Oculus Quest\",\n                    \"action\": \"Brake\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"aa6289fd-63e1-4879-91a1-060bb4a8e4c4\",\n                    \"path\":
+      \"<HID::Logitech G29 Driving Force Racing Wheel>/rz\",\n                   
+      \"interactions\": \"\",\n                    \"processors\": \"Invert,Clamp(max=1)\",\n                   
+      \"groups\": \"G920\",\n                    \"action\": \"Brake\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"wasd\",\n                   
+      \"id\": \"b84118c6-f280-4827-aec2-23b358ff2839\",\n                    \"path\":
+      \"1DAxis\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"Steering\",\n                    \"isComposite\": true,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"Negative\",\n                    \"id\": \"e39a68f9-d10f-4dfb-9c23-4911299ada81\",\n                   
+      \"path\": \"<Keyboard>/a\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard Mouse\",\n                   
+      \"action\": \"Steering\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"Positive\",\n                    \"id\": \"95b1dcb4-e179-495b-9829-2441e822fa9c\",\n                   
+      \"path\": \"<Keyboard>/d\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard Mouse\",\n                   
+      \"action\": \"Steering\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"arrows\",\n                    \"id\": \"c9265635-9301-4f28-857f-f8c35c3aeaa3\",\n                   
+      \"path\": \"1DAxis\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"Steering\",\n                    \"isComposite\": true,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"negative\",\n                    \"id\": \"0efc1b5a-a2af-4412-9c79-657c31d182ad\",\n                   
+      \"path\": \"<Keyboard>/leftArrow\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"Keyboard Mouse\",\n                    \"action\": \"Steering\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": true\n               
+      },\n                {\n                    \"name\": \"Positive\",\n                   
+      \"id\": \"f8373c7a-eb6c-4d91-afe6-1f8f9db75611\",\n                    \"path\":
+      \"<Keyboard>/rightArrow\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard Mouse\",\n                   
+      \"action\": \"Steering\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"gamepads\",\n                    \"id\": \"c33597ed-2d60-4495-acd6-1898c0c03435\",\n                   
+      \"path\": \"1DAxis\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"Steering\",\n                    \"isComposite\": true,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"Negative\",\n                    \"id\": \"2605240c-dc7a-4c85-a40f-3976962910e4\",\n                   
+      \"path\": \"<Gamepad>/leftStick/left\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"Gamepad\",\n                    \"action\": \"Steering\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": true\n               
+      },\n                {\n                    \"name\": \"Positive\",\n                   
+      \"id\": \"dfa77fc0-a4e7-4963-ba95-c84d55d9166b\",\n                    \"path\":
+      \"<Gamepad>/leftStick/right\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Gamepad\",\n                   
+      \"action\": \"Steering\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"a72b71b3-a5a9-476e-ba2f-303039d7d7f9\",\n                   
+      \"path\": \"<Joystick>/stick/x\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"Scale\",\n                    \"groups\": \"G920\",\n                   
+      \"action\": \"Steering\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"4f884a2c-fc71-409f-85a6-58868973caca\",\n                   
+      \"path\": \"<OculusTouchController>{LeftHand}/thumbstick/x\",\n                   
+      \"interactions\": \"\",\n                    \"processors\": \"\",\n                   
+      \"groups\": \"Oculus Quest\",\n                    \"action\": \"Steering\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"2252f11a-7704-4821-84b9-3abbcc3b2527\",\n                    \"path\":
+      \"<Keyboard>/i\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard Mouse\",\n                   
+      \"action\": \"Start/Stop Engine\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"e47a5c95-3e0c-4635-a53e-fd10b8d4047f\",\n                   
+      \"path\": \"<Gamepad>/buttonNorth\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"Gamepad\",\n                    \"action\": \"Start/Stop Engine\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"29b37afd-bc61-4290-9fdc-dd474f1cb45d\",\n                    \"path\":
+      \"<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/button7\",\n                   
+      \"interactions\": \"\",\n                    \"processors\": \"\",\n                   
+      \"groups\": \"G920\",\n                    \"action\": \"Start/Stop Engine\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"5684f55e-081f-4c1b-907a-f29c3e57b7ae\",\n                    \"path\":
+      \"<Keyboard>/l\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard Mouse\",\n                   
+      \"action\": \"Low Beam Lights\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"2dd929da-4b2b-4b95-afc6-dc90a1a9a8d9\",\n                   
+      \"path\": \"<Gamepad>/dpad/up\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Gamepad\",\n                   
+      \"action\": \"Low Beam Lights\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"68049a6d-7f4b-4ac6-ae57-134a916a4a11\",\n                   
+      \"path\": \"<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/button10\",\n                   
+      \"interactions\": \"\",\n                    \"processors\": \"\",\n                   
+      \"groups\": \"G920\",\n                    \"action\": \"Low Beam Lights\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"cb6ea6f1-37fa-4b63-8727-dbb03c52bc9e\",\n                    \"path\":
+      \"<Keyboard>/k\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard Mouse\",\n                   
+      \"action\": \"High Beam Lights\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"6f713ae7-4827-41a6-91e8-770b31c3deb9\",\n                   
+      \"path\": \"<Gamepad>/leftStick/down\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"Gamepad\",\n                    \"action\": \"High Beam Lights\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"da808eef-18ce-4dbc-9cf1-043577d98c91\",\n                    \"path\":
+      \"<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/button9\",\n                   
+      \"interactions\": \"\",\n                    \"processors\": \"\",\n                   
+      \"groups\": \"G920\",\n                    \"action\": \"High Beam Lights\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"0367e370-02e2-4afe-aa28-6329c07f3a80\",\n                    \"path\":
+      \"<Keyboard>/e\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard Mouse\",\n                   
+      \"action\": \"Indicator Right\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"e7494dde-bbd8-4530-81b9-b0202b184c0c\",\n                   
+      \"path\": \"<Gamepad>/dpad/right\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"Gamepad\",\n                    \"action\": \"Indicator Right\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"e2c9283d-228b-4eed-bb92-7754056bc3cc\",\n                    \"path\":
+      \"<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/hat/right\",\n                   
+      \"interactions\": \"\",\n                    \"processors\": \"\",\n                   
+      \"groups\": \"G920\",\n                    \"action\": \"Indicator Right\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"2694c28d-039d-4942-b81b-e63b965420f4\",\n                    \"path\":
+      \"<Keyboard>/q\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard Mouse\",\n                   
+      \"action\": \"Indicator Left\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"cf7abf08-b917-487c-ab52-fd1026fc7331\",\n                   
+      \"path\": \"<Gamepad>/dpad/left\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Gamepad\",\n                   
+      \"action\": \"Indicator Left\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"4dab2970-04c0-4e49-94f3-7f1d66dbda9b\",\n                   
+      \"path\": \"<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/hat/left\",\n                   
+      \"interactions\": \"\",\n                    \"processors\": \"\",\n                   
+      \"groups\": \"G920\",\n                    \"action\": \"Indicator Left\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"45686879-95ca-4111-a1a0-8a51bd6face3\",\n                    \"path\":
+      \"<Keyboard>/z\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard Mouse\",\n                   
+      \"action\": \"Indicator Hazard\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"9adff5e7-b73f-40d7-b21f-0b3befd55d7a\",\n                   
+      \"path\": \"<Gamepad>/dpad/down\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Gamepad\",\n                   
+      \"action\": \"Indicator Hazard\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"5ade0cb3-2beb-4419-816f-f881768375b9\",\n                   
+      \"path\": \"<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/hat/up\",\n                   
+      \"interactions\": \"\",\n                    \"processors\": \"\",\n                   
+      \"groups\": \"G920\",\n                    \"action\": \"Indicator Hazard\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"4ce9aa29-2ded-426a-9ad1-66520c441d57\",\n                    \"path\":
+      \"<Keyboard>/shift\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard Mouse\",\n                   
+      \"action\": \"Gear Shift Up\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"88696b5a-7de1-487d-9432-72ff1f524543\",\n                   
+      \"path\": \"<Gamepad>/rightShoulder\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"Gamepad\",\n                    \"action\": \"Gear Shift Up\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"a515f912-72c4-445d-aa6d-ba6be1069897\",\n                    \"path\":
+      \"<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/button5\",\n                   
+      \"interactions\": \"\",\n                    \"processors\": \"\",\n                   
+      \"groups\": \"G920\",\n                    \"action\": \"Gear Shift Up\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"5d68445d-55a1-40dc-a621-761b6465aaf6\",\n                    \"path\":
+      \"<OculusTouchController>{RightHand}/gripPressed\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"Oculus Quest\",\n                    \"action\": \"Gear Shift Up\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"a3802bd2-36a4-413e-8167-4a340771200f\",\n                    \"path\":
+      \"<Keyboard>/ctrl\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard Mouse\",\n                   
+      \"action\": \"Gear Shift Down\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"a79f57a5-8548-4707-a04f-c90d4145e24e\",\n                   
+      \"path\": \"<Gamepad>/leftShoulder\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"Gamepad\",\n                    \"action\": \"Gear Shift Down\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"5763683e-0147-4154-9e8a-5fc71fd7161c\",\n                    \"path\":
+      \"<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/button6\",\n                   
+      \"interactions\": \"\",\n                    \"processors\": \"\",\n                   
+      \"groups\": \"G920\",\n                    \"action\": \"Gear Shift Down\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"62961681-402e-4996-8576-ff512ede7953\",\n                    \"path\":
+      \"<OculusTouchController>{LeftHand}/gripPressed\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"Oculus Quest\",\n                    \"action\": \"Gear Shift Down\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"43b23f3e-b99b-410c-ab1a-494f337ce92d\",\n                    \"path\":
+      \"<Keyboard>/t\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard Mouse\",\n                   
+      \"action\": \"Trailer Detach\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"512cda51-6521-4aa0-aeb0-7e4e804ca2ac\",\n                   
+      \"path\": \"<Gamepad>/rightStickPress\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"Gamepad\",\n                    \"action\": \"Trailer Detach\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"keyboard\",\n                   
+      \"id\": \"102ac6d8-122a-4b65-be31-7707770e70ec\",\n                    \"path\":
+      \"1DAxis(minValue=0)\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"NOS\",\n                    \"isComposite\": true,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"negative\",\n                    \"id\": \"2e2a73c9-1895-4a1c-b03f-68828175ccab\",\n                   
+      \"path\": \"\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard Mouse\",\n                   
+      \"action\": \"NOS\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"positive\",\n                    \"id\": \"e79973b3-7960-4f29-abd3-aa45793d6dc2\",\n                   
+      \"path\": \"<Keyboard>/f\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard Mouse\",\n                   
+      \"action\": \"NOS\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"gamepads\",\n                    \"id\": \"e65d7948-806f-4365-abed-6afce7426719\",\n                   
+      \"path\": \"1DAxis(minValue=0)\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"NOS\",\n                    \"isComposite\": true,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"negative\",\n                    \"id\": \"09faeb51-116d-4cce-a128-5c75e6e0c09d\",\n                   
+      \"path\": \"\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Gamepad\",\n                   
+      \"action\": \"NOS\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"positive\",\n                    \"id\": \"09cafb73-a3fe-4b17-8eae-2af054391159\",\n                   
+      \"path\": \"<Gamepad>/buttonEast\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"Gamepad\",\n                    \"action\": \"NOS\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": true\n               
+      },\n                {\n                    \"name\": \"1D Axis\",\n                   
+      \"id\": \"8395bdc6-38e3-4d8c-8910-04c1598e3626\",\n                    \"path\":
+      \"1DAxis(minValue=0)\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"NOS\",\n                    \"isComposite\": true,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"negative\",\n                    \"id\": \"def3df07-c7c5-49e2-8ead-a9d15d455d3f\",\n                   
+      \"path\": \"\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"G920\",\n                   
+      \"action\": \"NOS\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"positive\",\n                    \"id\": \"895259a8-90c8-49b2-a3bd-ec8b286ddf79\",\n                   
+      \"path\": \"<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/trigger\",\n                   
+      \"interactions\": \"\",\n                    \"processors\": \"\",\n                   
+      \"groups\": \"G920\",\n                    \"action\": \"NOS\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": true\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"c7221e56-c7e1-42d9-8763-520459e0e6ca\",\n                    \"path\":
+      \"<OculusTouchController>{RightHand}/secondaryButton\",\n                   
+      \"interactions\": \"\",\n                    \"processors\": \"\",\n                   
+      \"groups\": \"Oculus Quest\",\n                    \"action\": \"NOS\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"5e4d36f2-15d1-4f09-984f-f79157b2dbf6\",\n                    \"path\":
+      \"<Keyboard>/n\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard Mouse\",\n                   
+      \"action\": \"N Gear\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"f28cedbd-5d4e-4109-a83f-6034beeb1786\",\n                   
+      \"path\": \"\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"G920\",\n                   
+      \"action\": \"N Gear\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"c67d3a53-1242-4c81-ade5-2b57f7d4bd18\",\n                   
+      \"path\": \"<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/button13\",\n                   
+      \"interactions\": \"\",\n                    \"processors\": \"\",\n                   
+      \"groups\": \"G920\",\n                    \"action\": \"1stGear\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"d1f89ffa-9f6c-4a79-9531-92fa5caf8ac3\",\n                    \"path\":
+      \"<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/button14\",\n                   
+      \"interactions\": \"\",\n                    \"processors\": \"\",\n                   
+      \"groups\": \"G920\",\n                    \"action\": \"2ndGear\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"d1efd96e-fba6-43d8-9653-e454c6d1a279\",\n                    \"path\":
+      \"<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/button15\",\n                   
+      \"interactions\": \"\",\n                    \"processors\": \"\",\n                   
+      \"groups\": \"G920\",\n                    \"action\": \"3rdGear\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"94746981-391a-411d-ba01-7d9cee57ef19\",\n                    \"path\":
+      \"<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/button16\",\n                   
+      \"interactions\": \"\",\n                    \"processors\": \"\",\n                   
+      \"groups\": \"G920\",\n                    \"action\": \"4thGear\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"18c7fc4b-5172-4255-90af-1779c92d64fd\",\n                    \"path\":
+      \"<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/button17\",\n                   
+      \"interactions\": \"\",\n                    \"processors\": \"\",\n                   
+      \"groups\": \"G920\",\n                    \"action\": \"5thGear\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"5bb54458-b514-4be4-a828-d0e3c305c891\",\n                    \"path\":
+      \"<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/button18\",\n                   
+      \"interactions\": \"\",\n                    \"processors\": \"\",\n                   
+      \"groups\": \"G920\",\n                    \"action\": \"6thGear\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"56a18610-79a9-4ed7-8576-92a99b424107\",\n                    \"path\":
+      \"<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/button12\",\n                   
+      \"interactions\": \"\",\n                    \"processors\": \"\",\n                   
+      \"groups\": \"G920\",\n                    \"action\": \"RGear\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"c7a478f8-e71f-4b68-9fd1-670a83b555f5\",\n                    \"path\":
+      \"<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/rz\",\n                   
+      \"interactions\": \"\",\n                    \"processors\": \"Normalize(min=1,max=-1,zero=1)\",\n                   
+      \"groups\": \"G920\",\n                    \"action\": \"Clutch\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      }\n            ]\n        },\n        {\n            \"name\": \"Camera\",\n           
+      \"id\": \"9833443b-7a36-43d9-b723-68beac1a943a\",\n            \"actions\":
+      [\n                {\n                    \"name\": \"Orbit\",\n                   
+      \"type\": \"Value\",\n                    \"id\": \"36c3b66b-e716-43bf-8b0f-d41f0459994b\",\n                   
+      \"expectedControlType\": \"Vector2\",\n                    \"processors\":
+      \"\",\n                    \"interactions\": \"\",\n                    \"initialStateCheck\":
+      true\n                },\n                {\n                    \"name\":
+      \"Change Camera\",\n                    \"type\": \"Button\",\n                   
+      \"id\": \"bd133a91-3836-4263-8f7d-7ebb0cd992a6\",\n                    \"expectedControlType\":
+      \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"Press\",\n                    \"initialStateCheck\": false\n               
+      },\n                {\n                    \"name\": \"Look Back\",\n                   
+      \"type\": \"Button\",\n                    \"id\": \"54cd471e-6c0b-42c9-b81c-87833fc3331a\",\n                   
+      \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"Press\",\n                    \"initialStateCheck\": false\n               
+      },\n                {\n                    \"name\": \"Zoom\",\n                   
+      \"type\": \"Value\",\n                    \"id\": \"f533f3d2-f07d-4dc7-b0cb-c4446055fdbf\",\n                   
+      \"expectedControlType\": \"Vector2\",\n                    \"processors\":
+      \"ScaleVector2(x=0.001,y=0.001),InvertVector2\",\n                    \"interactions\":
+      \"Press\",\n                    \"initialStateCheck\": true\n               
+      }\n            ],\n            \"bindings\": [\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"27ceac0e-cf18-40fc-9dd9-954bef4acec7\",\n                   
+      \"path\": \"<Keyboard>/c\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard Mouse\",\n                   
+      \"action\": \"Change Camera\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"928221b7-589f-47d1-9ebe-5561a8043444\",\n                   
+      \"path\": \"<Gamepad>/leftStickPress\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"Gamepad\",\n                    \"action\": \"Change Camera\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"72d2d1f3-315b-43a7-8f6c-3925bc71f2c1\",\n                    \"path\":
+      \"<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/button8\",\n                   
+      \"interactions\": \"\",\n                    \"processors\": \"\",\n                   
+      \"groups\": \"G920\",\n                    \"action\": \"Change Camera\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"75dc1a32-b749-400b-b89e-900e218595d9\",\n                    \"path\":
+      \"<OculusTouchController>{LeftHand}/primaryButton\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"Oculus Quest\",\n                    \"action\": \"Change Camera\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"f50bba44-f018-4f50-bae4-0fb6b314f581\",\n                    \"path\":
+      \"<Keyboard>/b\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard Mouse\",\n                   
+      \"action\": \"Look Back\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"410cb6fc-fa7e-40ab-9c8d-afebd630b972\",\n                   
+      \"path\": \"<Gamepad>/buttonWest\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"Gamepad\",\n                    \"action\": \"Look Back\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"cc718a8a-3bab-4b1f-b0e7-47f9a771f183\",\n                    \"path\":
+      \"<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/hat/down\",\n                   
+      \"interactions\": \"\",\n                    \"processors\": \"\",\n                   
+      \"groups\": \"G920\",\n                    \"action\": \"Look Back\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"0e6e3cd4-1cef-4169-845f-c4ce50524512\",\n                    \"path\":
+      \"<OculusTouchController>{RightHand}/thumbstickClicked\",\n                   
+      \"interactions\": \"\",\n                    \"processors\": \"\",\n                   
+      \"groups\": \"Oculus Quest\",\n                    \"action\": \"Look Back\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"10705ed5-34a8-40b6-afab-e3723c412fd4\",\n                    \"path\":
+      \"<Mouse>/delta\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"ScaleVector2(x=0.25,y=0.25)\",\n                    \"groups\":
+      \"Keyboard Mouse\",\n                    \"action\": \"Orbit\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"gamepads\",\n                   
+      \"id\": \"adf39205-15ba-43f3-9a61-30694bdff208\",\n                    \"path\":
+      \"2DVector(mode=2)\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"StickDeadzone\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"Orbit\",\n                    \"isComposite\": true,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"up\",\n                    \"id\": \"e88670fd-67e0-46a4-93ff-edfecf9d387a\",\n                   
+      \"path\": \"<Gamepad>/rightStick/up\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"Gamepad\",\n                    \"action\": \"Orbit\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": true\n               
+      },\n                {\n                    \"name\": \"down\",\n                   
+      \"id\": \"bed807c8-3819-4858-bbef-fc3a524d09fe\",\n                    \"path\":
+      \"<Gamepad>/rightStick/down\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Gamepad\",\n                   
+      \"action\": \"Orbit\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"left\",\n                    \"id\": \"6ca2a81c-e237-4897-90c2-2430527a1da7\",\n                   
+      \"path\": \"<Gamepad>/rightStick/left\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"Gamepad\",\n                    \"action\": \"Orbit\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": true\n               
+      },\n                {\n                    \"name\": \"right\",\n                   
+      \"id\": \"858ac0f9-c985-4d92-a793-44c779f559ab\",\n                    \"path\":
+      \"<Gamepad>/rightStick/right\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Gamepad\",\n                   
+      \"action\": \"Orbit\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"a8ebc1cc-3aa1-4d4b-88d3-f03fd85805ef\",\n                   
+      \"path\": \"<OculusTouchController>{RightHand}/thumbstick\",\n                   
+      \"interactions\": \"\",\n                    \"processors\": \"\",\n                   
+      \"groups\": \"Oculus Quest\",\n                    \"action\": \"Orbit\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"8e98b069-ee32-4fdd-a016-be730c22a2ee\",\n                    \"path\":
+      \"<Mouse>/scroll\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard Mouse\",\n                   
+      \"action\": \"Zoom\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                }\n            ]\n        },\n       
+      {\n            \"name\": \"Optional\",\n            \"id\": \"16242ab5-e647-477b-9a17-348443e08aaf\",\n           
+      \"actions\": [\n                {\n                    \"name\": \"Slow Motion\",\n                   
+      \"type\": \"Button\",\n                    \"id\": \"1b85fbea-08df-4020-9c1d-1dccac44b6e6\",\n                   
+      \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"Press\",\n                    \"initialStateCheck\": false\n               
+      },\n                {\n                    \"name\": \"Record\",\n                   
+      \"type\": \"Button\",\n                    \"id\": \"97e1cd85-e655-4c88-99b5-41db78efd038\",\n                   
+      \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"Press\",\n                    \"initialStateCheck\": false\n               
+      },\n                {\n                    \"name\": \"Replay\",\n                   
+      \"type\": \"Button\",\n                    \"id\": \"32a18283-3e10-4e5a-9367-d8d9eade3e78\",\n                   
+      \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"Press\",\n                    \"initialStateCheck\": false\n               
+      }\n            ],\n            \"bindings\": [\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"7e7f1b75-4234-4221-9430-5009b0189f41\",\n                   
+      \"path\": \"<Keyboard>/r\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard Mouse\",\n                   
+      \"action\": \"Record\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"470d0d53-dcb2-4cb0-a5a0-add83c1f0eec\",\n                   
+      \"path\": \"<Keyboard>/p\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard Mouse\",\n                   
+      \"action\": \"Replay\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"7babc1f5-e42a-4a07-b608-403cd4d3e66e\",\n                   
+      \"path\": \"<Keyboard>/g\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard Mouse\",\n                   
+      \"action\": \"Slow Motion\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                }\n            ]\n        }\n   
+      ],\n    \"controlSchemes\": [\n        {\n            \"name\": \"Keyboard
+      Mouse\",\n            \"bindingGroup\": \"Keyboard Mouse\",\n            \"devices\":
+      [\n                {\n                    \"devicePath\": \"<Keyboard>\",\n                   
+      \"isOptional\": false,\n                    \"isOR\": false\n               
+      }\n            ]\n        },\n        {\n            \"name\": \"Gamepad\",\n           
+      \"bindingGroup\": \"Gamepad\",\n            \"devices\": []\n        },\n       
+      {\n            \"name\": \"G920\",\n            \"bindingGroup\": \"G920\",\n           
+      \"devices\": []\n        },\n        {\n            \"name\": \"Oculus Quest\",\n           
+      \"bindingGroup\": \"Oculus Quest\",\n            \"devices\": []\n        }\n   
+      ]\n}"
+    m_IsDirty: 0
+  m_Toolbar:
+    m_IsDirty: 0
+    m_SelectedControlSchemeIndex: -1
+    m_SelectedDeviceRequirementIndex: -1
+    m_ControlSchemes:
+    - m_Name: Keyboard Mouse
+      m_BindingGroup: Keyboard Mouse
+      m_DeviceRequirements:
+      - m_ControlPath: <Keyboard>
+        m_Flags: 0
+    - m_Name: Gamepad
+      m_BindingGroup: Gamepad
+      m_DeviceRequirements: []
+    - m_Name: G920
+      m_BindingGroup: G920
+      m_DeviceRequirements: []
+    - m_Name: Oculus Quest
+      m_BindingGroup: Oculus Quest
+      m_DeviceRequirements: []
+    m_SearchText: 
+  m_DirtyTitle:
+    m_Text: (*) RCC_InputActions (Input Actions)
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Title:
+    m_Text: RCC_InputActions (Input Actions)
+    m_Image: {fileID: 0}
+    m_Tooltip: 
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -689,24 +1552,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 825
-    width: 1969
-    height: 482
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 11}
+    y: 631
+    width: 1477
+    height: 308
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 11}
   - {fileID: 12}
   - {fileID: 13}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -729,9 +1592,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 898
-    width: 1968
-    height: 461
+    y: 704
+    width: 1476
+    height: 287
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -749,22 +1612,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Scripts/Logger
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Scripts/Logger
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\FH_NoSync\SteerDemo
+  m_LastProjectPath: C:\Users\marti\Desktop\SteerDemo
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 184}
-    m_SelectedIDs: f4760000
-    m_LastClickedID: 30452
-    m_ExpandedIDs: 00000000ca76000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 540}
+    m_SelectedIDs: 84990000
+    m_LastClickedID: 39300
+    m_ExpandedIDs: 00000000be7a0000c07a00001a82000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -792,7 +1655,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ca76000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000be7a0000c07a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -817,8 +1680,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 76170000
+    m_LastClickedInstanceID: 6006
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000000000008e900000
     m_RenameOverlay:
@@ -870,9 +1733,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 898
-    width: 1968
-    height: 461
+    y: 704
+    width: 1476
+    height: 287
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -898,9 +1761,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 897
-    width: 1967
-    height: 462
+    y: 898
+    width: 1968
+    height: 461
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -922,10 +1785,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1969
+    x: 1477
     y: 0
-    width: 591
-    height: 1307
+    width: 443
+    height: 939
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
@@ -954,10 +1817,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1969
+    x: 1477
     y: 73
-    width: 590
-    height: 1286
+    width: 442
+    height: 918
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default

@@ -15814,7 +15814,6 @@ MonoBehaviour:
     orbitX: 0
     orbitY: 0
     scroll: {x: 0, y: 0}
-  steer: 0
   throttleInput: 0
   brakeInput: 0
   steerInput: 0

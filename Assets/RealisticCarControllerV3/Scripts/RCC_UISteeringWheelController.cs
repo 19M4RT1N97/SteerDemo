@@ -23,9 +23,9 @@ public class RCC_UISteeringWheelController : MonoBehaviour {
 
     public float input = 0f;
     private float steeringWheelAngle = 0f;
-    public float steeringWheelMaximumsteerAngle = 270f;
+    public float steeringWheelMaximumsteerAngle = 450f;
     public float steeringWheelResetPosSpeed = 20f;
-    public float steeringWheelCenterDeadZoneRadius = 5f;
+    public float steeringWheelCenterDeadZoneRadius = 0f;
 
     private RectTransform steeringWheelRect;
     private CanvasGroup steeringWheelCanvasGroup;

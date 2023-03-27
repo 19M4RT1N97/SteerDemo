@@ -314,11 +314,22 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "G29/920",
-                    "id": "917fc2f9-b027-48ea-a670-9f4f3cb137af",
-                    "path": "1DAxis(minValue=0)",
+                    "name": "",
+                    "id": "b7f469da-1f0b-4649-a1d2-d5c6795d48b5",
+                    "path": "<OculusTouchController>{RightHand}/trigger",
                     "interactions": "",
                     "processors": "",
+                    "groups": "Oculus Quest",
+                    "action": "Throttle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "0588fe89-e86a-4501-b207-2b4fbd79490a",
+                    "path": "1DAxis(minValue=0)",
+                    "interactions": "",
+                    "processors": "Invert",
                     "groups": "",
                     "action": "Throttle",
                     "isComposite": true,
@@ -326,33 +337,33 @@
                 },
                 {
                     "name": "negative",
-                    "id": "be73745b-397e-4185-9283-ea2f38bf4f84",
-                    "path": "<Joystick>/stick/down",
+                    "id": "af608471-20e3-4ade-ba03-07e0983e92b8",
+                    "path": "",
                     "interactions": "",
                     "processors": "",
-                    "groups": "G920",
+                    "groups": "",
                     "action": "Throttle",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "positive",
-                    "id": "24631aa9-3d4f-4a4c-9348-c76dc524a7bf",
-                    "path": "<Joystick>/stick/up",
+                    "id": "2c85c415-304e-48f6-b1c6-d724fd13695e",
+                    "path": "<HID::Logitech G29 Driving Force Racing Wheel>/z",
                     "interactions": "",
                     "processors": "",
-                    "groups": "G920",
+                    "groups": "",
                     "action": "Throttle",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "",
-                    "id": "b7f469da-1f0b-4649-a1d2-d5c6795d48b5",
-                    "path": "<OculusTouchController>{RightHand}/trigger",
+                    "id": "c86264ee-e235-44e4-beed-6b1529b25a10",
+                    "path": "<HID::Logitech G29 Driving Force Racing Wheel>/z",
                     "interactions": "",
-                    "processors": "",
-                    "groups": "Oculus Quest",
+                    "processors": "Invert,Clamp(max=1)",
+                    "groups": "G920",
                     "action": "Throttle",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -556,26 +567,15 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "G29/920",
-                    "id": "ea42dd76-8279-4357-8568-5591d76a5189",
-                    "path": "1DAxis(minValue=0)",
+                    "name": "",
+                    "id": "aa6289fd-63e1-4879-91a1-060bb4a8e4c4",
+                    "path": "<HID::Logitech G29 Driving Force Racing Wheel>/rz",
                     "interactions": "",
-                    "processors": "Scale(factor=2)",
-                    "groups": "",
-                    "action": "Brake",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "c803aabc-d4e4-43bd-8c6f-ada81a3a4ce8",
-                    "path": "<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/z",
-                    "interactions": "",
-                    "processors": "",
+                    "processors": "Invert,Clamp(max=1)",
                     "groups": "G920",
                     "action": "Brake",
                     "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": false
                 },
                 {
                     "name": "wasd",
@@ -679,7 +679,7 @@
                 {
                     "name": "",
                     "id": "a72b71b3-a5a9-476e-ba2f-303039d7d7f9",
-                    "path": "<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/stick/x",
+                    "path": "<Joystick>/stick/x",
                     "interactions": "",
                     "processors": "Scale",
                     "groups": "G920",
@@ -1217,7 +1217,7 @@
                 },
                 {
                     "name": "",
-                    "id": "e086e6ca-c703-4901-878c-46e7567d1730",
+                    "id": "c7a478f8-e71f-4b68-9fd1-670a83b555f5",
                     "path": "<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/rz",
                     "interactions": "",
                     "processors": "Normalize(min=1,max=-1,zero=1)",
