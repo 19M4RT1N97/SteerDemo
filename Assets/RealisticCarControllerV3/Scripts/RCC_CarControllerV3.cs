@@ -865,7 +865,7 @@ public class RCC_CarControllerV3 : RCC_Core {
 
         // Setting centre of mass.
         rigid.centerOfMass = transform.InverseTransformPoint(COM.transform.position);
-
+        
         if ((autoGenerateEngineRPMCurve) && oldEngineTorque != maxEngineTorque || oldMaxTorqueAtRPM != maxEngineTorqueAtRPM || minEngineRPM != oldMinEngineRPM || maxEngineRPM != oldMaxEngineRPM)
             ReCreateEngineTorqueCurve();
 
@@ -942,6 +942,7 @@ public class RCC_CarControllerV3 : RCC_Core {
             if (!externalController) {
 
                 inputs = RCC_InputManager.GetInputs();
+                inputs.steerInput = Input.GetAxis("Steering");
                 if (!automaticGear || semiAutomaticGear) {
                     if (!changingGear && !cutGas)
                         throttleInput = inputs.throttleInput;
@@ -964,14 +965,14 @@ public class RCC_CarControllerV3 : RCC_Core {
                 }
 
                 if (useSteeringSensitivity) {
-
+                    
                     bool oppositeDirection = Mathf.Sign(inputs.steerInput) != Mathf.Sign(steerInput) ? true : false;
                     steerInput = Mathf.MoveTowards(steerInput, inputs.steerInput + counterSteerInput, (Time.deltaTime * steeringSensitivityFactor * Mathf.Lerp(10f, 5f, steerAngle / orgSteerAngle)) * (oppositeDirection ? 1f : 1f));
 
                 } else {
                     steerInput = inputs.steerInput + counterSteerInput;
                 }
-
+                
                 SteeringAssistance();
 
                 boostInput = inputs.boostInput;
@@ -1013,7 +1014,6 @@ public class RCC_CarControllerV3 : RCC_Core {
                         clutchInput = 1f;
 
                 }
-
             }
 
         } else if (!externalController) {
