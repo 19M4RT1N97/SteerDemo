@@ -44,7 +44,6 @@ namespace Logger
                         Distance = statistics.Distance,
                         RoadPercentage = statistics.RoadPercent
                     });
-                    Debug.Log(DriverLog.Last().RoadPercentage);
                 }
             }
         }

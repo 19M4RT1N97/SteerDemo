@@ -10,6 +10,7 @@ namespace DefaultNamespace
         [SerializeField] private GameObject _debug;
         private float _length = 20f;
         private SplineDone _spline;
+        private SplineDone _curveSpline;
         private SplineMesh _splineMesh;
         private Vector3 _startPosition = new Vector3(0f, 0f, 90f);
 
@@ -45,6 +46,9 @@ namespace DefaultNamespace
                 }
                 currentPosition = AddAnchorPoint(currentPosition, direction, sideways, _length);
             }
+
+            _curveSpline.anchorList = _spline.anchorList.ToList();
+            _curveSpline.SetupPointList();
             AddAnchorPoint(currentPosition, direction, sideways, _length/2);
             _finish.transform.position = currentPosition + new Vector3(0,5,0) + direction;
             _finish.transform.rotation = Quaternion.Euler(new Vector3(0,(iterationAmount-1)*angle,0));
@@ -59,7 +63,7 @@ namespace DefaultNamespace
         {
             var carTranform = car.transform;
 
-            var pointList = _spline.GetPointList();
+            var pointList = _curveSpline.GetPointList();
             int pointIndex = 0;
             float distance = float.PositiveInfinity;
             for(int i = 0; i< pointList.Count; i++)

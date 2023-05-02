@@ -7,7 +7,7 @@ public class SplineDone : MonoBehaviour {
     
     [SerializeField] private Vector3 normal = new Vector3(0, 1, 0);
     [SerializeField] private bool closedLoop;
-    [SerializeField] private List<Anchor> anchorList;
+    [SerializeField] public List<Anchor> anchorList;
 
     private float moveDistance;
     private float pointAmountInCurve;
