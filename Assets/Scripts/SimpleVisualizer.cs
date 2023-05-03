@@ -19,6 +19,7 @@ namespace DefaultNamespace
         {
             _splineMesh = gameObject.AddComponent<SplineMesh>();
             _spline = gameObject.AddComponent<SplineDone>();
+            _curveSpline = gameObject.AddComponent<SplineDone>();
             debugList = new List<GameObject>();
         }
 
