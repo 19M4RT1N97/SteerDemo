@@ -29,7 +29,7 @@ namespace Logger
 
         public override string GetCsv()
         {
-            return $"{TimeStamp};{Speed.ToString(CultureInfo.InvariantCulture).Replace(".",",")};{RecSpeed};{CurveAngle};{Brake};{Throttle.ToString(CultureInfo.InvariantCulture).Replace(".",",")};{Distance.ToString(CultureInfo.InvariantCulture).Replace(".",",")};{RoadPercentage.ToString(CultureInfo.InvariantCulture).Replace(".",",")};{Steering.ToString(CultureInfo.InvariantCulture).Replace(".",",")}";
+            return $"{TimeStamp};{Speed.ToString(CultureInfo.InvariantCulture).Replace(".",",")};{RecSpeed};{CurveAngle};{Brake.ToString(CultureInfo.InvariantCulture).Replace(".",",")};{Throttle.ToString(CultureInfo.InvariantCulture).Replace(".",",")};{Distance.ToString(CultureInfo.InvariantCulture).Replace(".",",")};{RoadPercentage.ToString(CultureInfo.InvariantCulture).Replace(".",",")};{Steering.ToString(CultureInfo.InvariantCulture).Replace(".",",")}";
         }
 
         public override string GetCsvHeaders()
