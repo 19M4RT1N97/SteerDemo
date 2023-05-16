@@ -7,7 +7,7 @@ namespace Logger
     {
         public DriverLog()
         {
-            TimeStamp = DateTime.Now.ToString("HH:mm:ss.fff");
+            TimeStamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.ffff");
         }
         private readonly string TimeStamp;
         
